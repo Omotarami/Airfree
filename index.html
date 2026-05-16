@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Airfree Geospatial Company</title>
+  </head>
+  <body class="bg-white text-gray-800">
+    <!-- Navbar -->
+    <header class="bg-white shadow-sm fixed w-full z-50">
+      <nav
+        class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <h1 class="text-2xl font-bold">
+          <img src="images/Airfree Barner.png" alt="" width="200" />
+        </h1>
+
+        <ul class="hidden md:flex space-x-8 text-sm font-medium">
+          <li><a href="#home" class="hover:text-green-700">Home</a></li>
+          <li><a href="#about" class="hover:text-green-700">About</a></li>
+          <li><a href="#services" class="hover:text-green-700">Services</a></li>
+          <li><a href="#projects" class="hover:text-green-700">Projects</a></li>
+          <li><a href="#contact" class="hover:text-green-700">Contact</a></li>
+        </ul>
+
+        <a
+          href="#contact"
+          class="hidden md:inline-block bg-green-700 text-white px-5 py-2 rounded-lg hover:bg-green-800"
+        >
+          Get Started
+        </a>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      id="home"
+      class="pt-32 pb-20 bg-gradient-to-br from-green-900 via-green-800 to-gray-900 text-white"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center"
+      >
+        <div>
+          <p class="text-green-300 font-semibold mb-4">
+            GEOSPATIAL INTELLIGENCE & MAPPING SOLUTIONS
+          </p>
+
+          <h2 class="text-4xl md:text-6xl font-bold leading-tight mb-6">
+            Transforming Location Data Into Actionable Insights
+          </h2>
+
+          <p class="text-gray-200 text-lg mb-8">
+            We provide advanced GIS, remote sensing, drone mapping, and spatial
+            analytics solutions to help organizations make smarter decisions.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <a
+              href="#services"
+              class="bg-green-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-600 text-center"
+            >
+              Explore Services
+            </a>
+
+            <a
+              href="#contact"
+              class="border border-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-900 text-center"
+            >
+              Contact Us
+            </a>
+          </div>
+        </div>
+
+        <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl shadow-xl">
+          <div
+            class="h-80 bg-green-700/40 rounded-xl flex items-center justify-center"
+          >
+            <p class="text-center text-gray-200">
+              Map / GIS Visual Placeholder
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+      <div
+        class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center"
+      >
+        <div>
+          <h3 class="text-3xl font-bold text-gray-900 mb-6">
+            About Our Company
+          </h3>
+
+          <p class="text-gray-600 mb-4">
+            We are a geospatial technology company helping businesses,
+            governments, and organizations understand the world through accurate
+            location-based data.
+          </p>
+
+          <p class="text-gray-600">
+            Our solutions combine GIS, satellite imagery, field data, drone
+            technology, and analytics to support planning, monitoring, and
+            decision-making.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 gap-4">
+          <div class="bg-white p-6 rounded-xl shadow">
+            <h4 class="text-3xl font-bold text-green-700">10+</h4>
+            <p class="text-gray-600">Years Experience</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow">
+            <h4 class="text-3xl font-bold text-green-700">150+</h4>
+            <p class="text-gray-600">Projects Completed</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow">
+            <h4 class="text-3xl font-bold text-green-700">25+</h4>
+            <p class="text-gray-600">Expert Team</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow">
+            <h4 class="text-3xl font-bold text-green-700">99%</h4>
+            <p class="text-gray-600">Data Accuracy</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-14">
+          <p class="text-green-700 font-semibold mb-2">OUR SERVICES</p>
+          <h3 class="text-3xl md:text-4xl font-bold text-gray-900">
+            Geospatial Solutions We Provide
+          </h3>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div
+            class="bg-white border p-8 rounded-2xl shadow-sm hover:shadow-lg transition"
+          >
+            <div
+              class="w-12 h-12 bg-green-100 text-green-700 rounded-lg flex items-center justify-center mb-5"
+            >
+              GIS
+            </div>
+            <h4 class="text-xl font-bold mb-3">GIS Mapping</h4>
+            <p class="text-gray-600">
+              Custom geographic information systems for mapping, visualization,
+              and spatial planning.
+            </p>
+          </div>
+
+          <div
+            class="bg-white border p-8 rounded-2xl shadow-sm hover:shadow-lg transition"
+          >
+            <div
+              class="w-12 h-12 bg-green-100 text-green-700 rounded-lg flex items-center justify-center mb-5"
+            >
+              RS
+            </div>
+            <h4 class="text-xl font-bold mb-3">Remote Sensing</h4>
+            <p class="text-gray-600">
+              Satellite and aerial imagery analysis for environmental monitoring
+              and land use studies.
+            </p>
+          </div>
+
+          <div
+            class="bg-white border p-8 rounded-2xl shadow-sm hover:shadow-lg transition"
+          >
+            <div
+              class="w-12 h-12 bg-green-100 text-green-700 rounded-lg flex items-center justify-center mb-5"
+            >
+              UAV
+            </div>
+            <h4 class="text-xl font-bold mb-3">Drone Mapping</h4>
+            <p class="text-gray-600">
+              High-resolution aerial mapping, surveys, and 3D terrain modeling
+              using drone technology.
+            </p>
+          </div>
+
+          <div
+            class="bg-white border p-8 rounded-2xl shadow-sm hover:shadow-lg transition"
+          >
+            <div
+              class="w-12 h-12 bg-green-100 text-green-700 rounded-lg flex items-center justify-center mb-5"
+            >
+              DATA
+            </div>
+            <h4 class="text-xl font-bold mb-3">Spatial Data Analysis</h4>
+            <p class="text-gray-600">
+              Data-driven spatial insights to support planning, logistics, risk
+              assessment, and development.
+            </p>
+          </div>
+
+          <div
+            class="bg-white border p-8 rounded-2xl shadow-sm hover:shadow-lg transition"
+          >
+            <div
+              class="w-12 h-12 bg-green-100 text-green-700 rounded-lg flex items-center justify-center mb-5"
+            >
+              WEB
+            </div>
+            <h4 class="text-xl font-bold mb-3">Web GIS Solutions</h4>
+            <p class="text-gray-600">
+              Interactive web-based maps and dashboards for real-time location
+              intelligence.
+            </p>
+          </div>
+
+          <div
+            class="bg-white border p-8 rounded-2xl shadow-sm hover:shadow-lg transition"
+          >
+            <div
+              class="w-12 h-12 bg-green-100 text-green-700 rounded-lg flex items-center justify-center mb-5"
+            >
+              SUR
+            </div>
+            <h4 class="text-xl font-bold mb-3">Land Surveying</h4>
+            <p class="text-gray-600">
+              Accurate field surveys and geospatial data collection for
+              engineering and land projects.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-50">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-14">
+          <p class="text-green-700 font-semibold mb-2">OUR WORK</p>
+          <h3 class="text-3xl md:text-4xl font-bold text-gray-900">
+            Featured Project Areas
+          </h3>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="rounded-2xl overflow-hidden bg-white shadow">
+            <div class="h-48 bg-green-800"></div>
+            <div class="p-6">
+              <h4 class="text-xl font-bold mb-2">Urban Planning Maps</h4>
+              <p class="text-gray-600">
+                GIS mapping solutions for city planning and infrastructure
+                development.
+              </p>
+            </div>
+          </div>
+
+          <div class="rounded-2xl overflow-hidden bg-white shadow">
+            <div class="h-48 bg-gray-800"></div>
+            <div class="p-6">
+              <h4 class="text-xl font-bold mb-2">Environmental Monitoring</h4>
+              <p class="text-gray-600">
+                Remote sensing analysis for vegetation, water bodies, and land
+                use changes.
+              </p>
+            </div>
+          </div>
+
+          <div class="rounded-2xl overflow-hidden bg-white shadow">
+            <div class="h-48 bg-green-700"></div>
+            <div class="p-6">
+              <h4 class="text-xl font-bold mb-2">Drone Survey Projects</h4>
+              <p class="text-gray-600">
+                High-resolution drone mapping for construction, agriculture, and
+                land surveys.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-20 bg-green-900 text-white">
+      <div
+        class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center"
+      >
+        <div>
+          <p class="text-green-300 font-semibold mb-3">WHY CHOOSE US</p>
+          <h3 class="text-3xl md:text-4xl font-bold mb-6">
+            Reliable Geospatial Intelligence for Every Project
+          </h3>
+
+          <p class="text-gray-200 mb-6">
+            We combine technical expertise, modern geospatial tools, and
+            accurate field data to deliver solutions that are clear, reliable,
+            and decision-ready.
+          </p>
+        </div>
+
+        <div class="space-y-5">
+          <div class="bg-white/10 p-5 rounded-xl">
+            <h4 class="font-bold mb-1">Accurate Data Collection</h4>
+            <p class="text-gray-300">
+              We use reliable tools and methods to ensure data quality.
+            </p>
+          </div>
+
+          <div class="bg-white/10 p-5 rounded-xl">
+            <h4 class="font-bold mb-1">Modern GIS Technology</h4>
+            <p class="text-gray-300">
+              Our team works with advanced mapping and analytics platforms.
+            </p>
+          </div>
+
+          <div class="bg-white/10 p-5 rounded-xl">
+            <h4 class="font-bold mb-1">Customized Solutions</h4>
+            <p class="text-gray-300">
+              Every solution is tailored to your project needs and goals.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <p class="text-green-700 font-semibold mb-2">CONTACT US</p>
+        <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          Let’s Discuss Your Geospatial Project
+        </h3>
+
+        <p class="text-gray-600 mb-10">
+          Need mapping, surveying, remote sensing, or spatial data support? Get
+          in touch with us today.
+        </p>
+
+        <form class="grid gap-5 text-left">
+          <input
+            type="text"
+            placeholder="Your Name"
+            class="w-full border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
+          />
+
+          <input
+            type="email"
+            placeholder="Email Address"
+            class="w-full border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
+          />
+
+          <textarea
+            rows="5"
+            placeholder="Tell us about your project"
+            class="w-full border border-gray-300 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-green-600"
+          ></textarea>
+
+          <button
+            class="bg-green-700 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-800"
+          >
+            Send Message
+          </button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-8">
+      <div
+        class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4"
+      >
+        <p>&copy; 2026 GeoVista. All rights reserved.</p>
+        <p>GIS • Remote Sensing • Drone Mapping • Spatial Analytics</p>
+      </div>
+    </footer>
+  </body>
+</html>

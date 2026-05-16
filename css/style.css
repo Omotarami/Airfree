@@ -1,0 +1,13 @@
+:root {
+
+  --primary-color: #2563eb;
+  --secondary-color: #07111F;
+  --text-color: #ffffff;
+
+}
+
+body {
+  font-family: 'Manrope' , sans-serif;
+  background: var(--secondary-color);
+  color: var(--text-color);
+}
