@@ -43,8 +43,7 @@ function injectNav() {
     <nav class="site-nav" id="site-nav">
       <div class="nav-inner">
         <a href="${BASE}index.html" class="nav-logo">
-          <span class="nav-logo-name">AIRFREE GEOSPATIAL</span>
-          <span class="nav-logo-sub">Pty Ltd &mdash; Spatial Intelligence</span>
+        <img src="${BASE}images/Airfree_logo.png" alt="airfree_logo" class="nav-img"> 
         </a>
         <div class="nav-links" id="nav-links">
           ${linksHtml}
