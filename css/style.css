@@ -29,6 +29,10 @@ img, video, svg {
   max-width: 100%;
   height: auto;
 }
+
+* {
+  min-width: 0;
+}
  
 body {
   font-family: 'Inter', -apple-system, sans-serif;
@@ -278,13 +282,20 @@ select.form-control option { background: var(--bg-card); }
 
 /* ── Responsive ── */
 @media (max-width: 1023px) {
-  .nav-links { display: none; }
+  .nav-links { display: none;   gap: 1.2rem; }
   .nav-hamburger { display: block; }
 }
 @media (max-width: 767px) {
+  .nav-inner{padding: 0 1rem;}
   .section { padding: 4rem 0; }
   .section-lg { padding: 5rem 0; }
-  .container, .container-tight { padding: 0 1rem; }
+  .container, .container-tight { .container,
+.container-tight {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 1rem;
+} }
   .hero { min-height: 90vh; }
   .stat-val { font-size: 1.75rem; }
   .btn { padding: 0.8rem 1.5rem; }
