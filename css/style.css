@@ -19,9 +19,17 @@
   --accent-al:    #C4913A;
 }
 
+html, body {
+  overflow-x: hidden;
+}
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; font-size: 17px; }
 
+img, video, svg {
+  max-width: 100%;
+  height: auto;
+}
+ 
 body {
   font-family: 'Inter', -apple-system, sans-serif;
   background-color: var(--bg-dark);
@@ -276,7 +284,7 @@ select.form-control option { background: var(--bg-card); }
 @media (max-width: 767px) {
   .section { padding: 4rem 0; }
   .section-lg { padding: 5rem 0; }
-  .container, .container-tight { padding: 0 1.25rem; }
+  .container, .container-tight { padding: 0 1rem; }
   .hero { min-height: 90vh; }
   .stat-val { font-size: 1.75rem; }
   .btn { padding: 0.8rem 1.5rem; }
