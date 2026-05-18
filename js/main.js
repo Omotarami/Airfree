@@ -12,13 +12,28 @@ const CURRENT = window.location.pathname.split("/").pop() || "index.html";
 
 // ── Navigation links ──────────────────────────────────────────
 const NAV = [
-  {href: "index.html", label: "Home"},
-  {href: "about.html", label: "About"},
-  {href: "services.html", label: "Services"},
-  {href: "industries.html", label: "Industries"},
-  {href: "projects.html", label: "Projects"},
-  {href: "technology.html", label: "Technology"},
-  {href: "contact.html", label: "Contact"},
+  { href: "index.html", label: "Home" },
+  { href: "about.html", label: "About" },
+
+  {
+    href: "services.html",
+    label: "Services",
+    children: [
+      { href: "technology.html", label: "Technology" },
+      
+    ],
+  },
+
+  {
+    href: "industries.html",
+    label: "Industries",
+    children: [
+      { href: "industries.html#gov", label: "Government" },
+      { href: "industries.html#utilities", label: "Utilities" },
+    ],
+  },
+
+  { href: "contact.html", label: "Contact" },
 ];
 
 function isActive(href) {
@@ -35,14 +50,53 @@ function isActive(href) {
 
 // ── Inject Navigation ─────────────────────────────────────────
 function injectNav() {
-  const linksHtml = NAV.map(
-    (l) =>
-      `<a href="${BASE}${l.href}" class="nav-link ${isActive(l.href) ? "active" : ""}">${l.label}</a>`,
-  ).join("");
+ const linksHtml = NAV.map((l) => {
+  if (l.children && l.children.length) {
+    return `
+      <div class="nav-dropdown">
+        <a href="${BASE}${l.href}" class="nav-link ${isActive(l.href) ? "active" : ""}">
+          ${l.label}
+        </a>
 
-  const mobileHtml = NAV.map(
-    (l) => `<a href="${BASE}${l.href}" class="mobile-nav-link">${l.label}</a>`,
-  ).join("");
+        <div class="dropdown-menu">
+          ${l.children
+            .map(
+              (c) =>
+                `<a href="${BASE}${c.href}" class="dropdown-link">${c.label}</a>`
+            )
+            .join("")}
+        </div>
+      </div>
+    `;
+  }
+
+  return `
+    <a href="${BASE}${l.href}" class="nav-link ${isActive(l.href) ? "active" : ""}">
+      ${l.label}
+    </a>
+  `;
+}).join("");
+
+  const mobileHtml = NAV.map((l) => {
+  if (l.children && l.children.length) {
+    return `
+      <div class="mobile-nav-group">
+        <a href="${BASE}${l.href}" class="mobile-nav-link">${l.label}</a>
+
+        <div class="mobile-submenu">
+          ${l.children
+            .map(
+              (c) =>
+                `<a href="${BASE}${c.href}" class="mobile-sub-link">${c.label}</a>`
+            )
+            .join("")}
+        </div>
+      </div>
+    `;
+  }
+
+  return `<a href="${BASE}${l.href}" class="mobile-nav-link">${l.label}</a>`;
+}).join("");
 
   const navHtml = `
     <nav class="site-nav" id="site-nav">
@@ -118,7 +172,7 @@ function injectFooter() {
 
           <!-- Brand -->
           <div>
-            <div style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;color:white;margin-bottom:0.4rem;">AIRFREE GEOSPATIAL PTY LTD</div>
+            <img src="${BASE}images/Airfree_footer.png" alt="airfree_logo" class="nav-img_footer">
             <div style="font-family:'IBM Plex Mono',monospace;font-size:0.54rem;letter-spacing:0.22em;color:var(--accent-b);text-transform:uppercase;margin-bottom:1.25rem;">Enterprise Spatial Intelligence</div>
             <p style="font-size:0.84rem;color:var(--text-2);max-width:300px;line-height:1.7;">A specialised geospatial intelligence and infrastructure analytics consultancy serving government, utilities, and large-scale engineering operations.</p>
           </div>
