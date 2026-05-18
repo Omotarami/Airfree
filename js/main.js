@@ -75,8 +75,8 @@ function injectNav() {
     const nav = document.getElementById('site-nav');
     if (!nav) return;
     nav.style.background = window.scrollY > 60
-      ? 'rgba(3,8,16,0.99)'
-      : 'rgba(7,12,24,0.96)';
+      ? 'rgba(255,255,255,0.98)'
+      : 'white';
   }, { passive: true });
 }
 
