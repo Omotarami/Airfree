@@ -1,229 +1,785 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About — Airfree Geospatial Pty Ltd</title>
-  <meta name="description" content="About Airfree Geospatial Pty Ltd — enterprise geospatial intelligence consultancy. Mission, philosophy, operational focus, and leadership." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config={theme:{extend:{fontFamily:{serif:['Playfair Display','Georgia','serif'],sans:['Inter','system-ui','sans-serif'],mono:['IBM Plex Mono','monospace']}}}}</script>
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
-
-<!-- PAGE HERO -->
-<section class="page-hero">
-  <div class="page-hero-grid"></div>
-  <div class="container" style="position:relative;z-index:2;">
-    <div class="coord" style="margin-bottom:1.25rem;">ABOUT THE ORGANISATION &nbsp;|&nbsp; AIRFREE GEOSPATIAL PTY LTD</div>
-    <div class="label reveal" style="margin-bottom:1rem;">Organisational Profile</div>
-    <h1 class="reveal d1" style="font-size:clamp(2rem,4vw,3.2rem);margin-bottom:1rem;">About Airfree Geospatial</h1>
-    <p class="reveal d2" style="font-size:0.9rem;color:var(--text-2);max-width:560px;line-height:1.8;">Mission, philosophy, and the institutional framework that defines our enterprise geospatial consultancy.</p>
-  </div>
-</section>
-
-<!-- MISSION -->
-<section class="section" style="background:var(--bg-primary);">
-  <div class="container">
-    <div class="grid-1-1" style="gap:6rem;align-items:start;">
-      <div>
-        <div class="label reveal" style="margin-bottom:1.25rem;">Mission</div>
-        <h2 class="reveal d1" style="font-size:clamp(1.8rem,3vw,2.5rem);margin-bottom:1.5rem;">Advancing the Precision and Utility of Spatial Intelligence</h2>
-        <p class="reveal d2" style="font-size:0.9rem;color:var(--text-2);line-height:1.85;margin-bottom:1.25rem;">Airfree Geospatial Pty Ltd exists to deliver enterprise-grade geospatial intelligence and infrastructure analytics to organisations whose decisions depend on accurate, verifiable, and spatially referenced information.</p>
-        <p class="reveal d3" style="font-size:0.9rem;color:var(--text-2);line-height:1.85;margin-bottom:1.25rem;">Our mission is to close the gap between raw spatial data and actionable institutional intelligence — equipping government bodies, infrastructure operators, and engineering firms with the analytical systems, technical capacity, and decision-support frameworks they require to manage complex spatial environments.</p>
-        <p class="reveal d4" style="font-size:0.9rem;color:var(--text-2);line-height:1.85;">We operate at the highest level of geospatial technical practice, applying peer-reviewed methodologies, validated data workflows, and enterprise-tested architectures to every client engagement.</p>
-      </div>
-      <div>
-        <div style="background:var(--bg-card);border:1px solid var(--border-m);padding:2.5rem;margin-bottom:1.5rem;" class="reveal d1">
-          <div class="label" style="margin-bottom:1rem;">Our Position</div>
-          <h3 style="font-size:1.1rem;margin-bottom:1rem;font-weight:600;">Enterprise Geospatial Intelligence &amp; Infrastructure Analytics</h3>
-          <p style="font-size:0.85rem;color:var(--text-2);line-height:1.8;">We are not a general-purpose mapping company. Airfree Geospatial is a specialised enterprise consultancy operating at the intersection of spatial data science, engineering infrastructure, and analytical systems architecture. Our clients are organisations for whom spatial accuracy is a professional and regulatory requirement, not a preference.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About — Airfree Geospatial Pty Ltd</title>
+    <meta
+      name="description"
+      content="About Airfree Geospatial Pty Ltd — enterprise geospatial intelligence consultancy. Mission, philosophy, operational focus, and leadership."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ["Playfair Display", "Georgia", "serif"],
+              sans: ["Inter", "system-ui", "sans-serif"],
+              mono: ["IBM Plex Mono", "monospace"],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- PAGE HERO -->
+    <section class="page-hero">
+      <div class="page-hero-grid"></div>
+      <div class="container" style="position: relative; z-index: 2">
+        <div class="coord" style="margin-bottom: 1.25rem">
+          ABOUT THE ORGANISATION &nbsp;|&nbsp; AIRFREE GEOSPATIAL PTY LTD
         </div>
-        <div class="grid-1-1 reveal d2" style="gap:1rem;">
-          <div style="background:var(--bg-card);border:1px solid var(--border-s);padding:1.5rem;">
-            <div class="stat-val">PhD</div>
-            <div class="stat-lbl">Academic Expertise Level</div>
-          </div>
-          <div style="background:var(--bg-card);border:1px solid var(--border-s);padding:1.5rem;">
-            <div class="stat-val">7</div>
-            <div class="stat-lbl">Core Service Domains</div>
-          </div>
-          <div style="background:var(--bg-card);border:1px solid var(--border-s);padding:1.5rem;">
-            <div class="stat-val">8+</div>
-            <div class="stat-lbl">Industry Sectors Served</div>
-          </div>
-          <div style="background:var(--bg-card);border:1px solid var(--border-s);padding:1.5rem;">
-            <div class="stat-val">AU</div>
-            <div class="stat-lbl">ABN Registered &mdash; Australia</div>
-          </div>
+        <div class="label reveal" style="margin-bottom: 1rem">
+          Organisational Profile
         </div>
+        <h1
+          class="reveal d1"
+          style="font-size: clamp(2rem, 4vw, 3.2rem); margin-bottom: 1rem"
+        >
+          About Airfree Geospatial
+        </h1>
+        <p
+          class="reveal d2"
+          style="
+            font-size: 0.9rem;
+            color: var(--text-2);
+            max-width: 560px;
+            line-height: 1.8;
+          "
+        >
+          Mission, philosophy, and the institutional framework that defines our
+          enterprise geospatial consultancy.
+        </p>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<div class="divider"></div>
-
-<!-- ENTERPRISE PHILOSOPHY -->
-<section class="section" style="background:var(--bg-darkest);">
-  <div class="container">
-    <div class="label reveal" style="margin-bottom:1.25rem;">Enterprise Philosophy</div>
-    <div class="grid-2-1" style="gap:5rem;align-items:start;margin-bottom:3.5rem;">
-      <h2 class="reveal d1" style="font-size:clamp(1.8rem,3vw,2.5rem);">How We Approach Enterprise Geospatial Consultancy</h2>
-      <p class="reveal d2" style="font-size:0.88rem;color:var(--text-2);line-height:1.8;padding-top:0.5rem;">Our operating philosophy is defined by technical rigour, institutional accountability, and a fundamental commitment to data integrity across every engagement phase.</p>
-    </div>
-
-    <div class="grid-cols-3" style="gap:1.5rem;">
-      <div class="card reveal">
-        <div class="accent-bar" style="margin-bottom:1.25rem;"></div>
-        <h3 style="font-size:1rem;font-weight:600;margin-bottom:0.75rem;font-family:'Playfair Display',serif;">Technical Primacy</h3>
-        <p style="font-size:0.84rem;color:var(--text-2);line-height:1.75;">Every decision in our workflows is driven by technical best practice, validated methodology, and verifiable accuracy metrics. We do not trade precision for convenience.</p>
-      </div>
-      <div class="card reveal d1">
-        <div class="accent-bar" style="margin-bottom:1.25rem;"></div>
-        <h3 style="font-size:1rem;font-weight:600;margin-bottom:0.75rem;font-family:'Playfair Display',serif;">Institutional Accountability</h3>
-        <p style="font-size:0.84rem;color:var(--text-2);line-height:1.75;">Our deliverables are structured for audit, traceability, and regulatory compliance. We maintain full documentation trails and operate within established geospatial standards including ISO 19100 and OGC specifications.</p>
-      </div>
-      <div class="card reveal d2">
-        <div class="accent-bar" style="margin-bottom:1.25rem;"></div>
-        <h3 style="font-size:1rem;font-weight:600;margin-bottom:0.75rem;font-family:'Playfair Display',serif;">Systems Thinking</h3>
-        <p style="font-size:0.84rem;color:var(--text-2);line-height:1.75;">We approach each engagement as a systems challenge — understanding upstream data sources, integration requirements, downstream consumption environments, and long-term data governance implications before recommending solutions.</p>
-      </div>
-      <div class="card reveal d3">
-        <div class="accent-bar" style="margin-bottom:1.25rem;"></div>
-        <h3 style="font-size:1rem;font-weight:600;margin-bottom:0.75rem;font-family:'Playfair Display',serif;">Contextual Relevance</h3>
-        <p style="font-size:0.84rem;color:var(--text-2);line-height:1.75;">Spatial data without operational context is noise. Our analytical outputs are explicitly designed to address the decision environments of our clients — not to demonstrate technical capability in isolation.</p>
-      </div>
-      <div class="card reveal d4">
-        <div class="accent-bar" style="margin-bottom:1.25rem;"></div>
-        <h3 style="font-size:1rem;font-weight:600;margin-bottom:0.75rem;font-family:'Playfair Display',serif;">Scalability by Design</h3>
-        <p style="font-size:0.84rem;color:var(--text-2);line-height:1.75;">All architectures and data systems we deliver are designed for enterprise-scale operation from inception — avoiding the costly retrofitting that results from solutions built at a smaller scope than their operational context requires.</p>
-      </div>
-      <div class="card reveal d5">
-        <div class="accent-bar" style="margin-bottom:1.25rem;"></div>
-        <h3 style="font-size:1rem;font-weight:600;margin-bottom:0.75rem;font-family:'Playfair Display',serif;">Independent Verification</h3>
-        <p style="font-size:0.84rem;color:var(--text-2);line-height:1.75;">We build independent verification stages into all analytical workflows. QA/QC is not a final-stage gate — it is embedded throughout data acquisition, processing, and output generation.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- OPERATIONAL FOCUS -->
-<section class="section" style="background:var(--bg-secondary)grid-tex;">
-  <div class="container">
-    <div class="grid-1-2" style="gap:6rem;align-items:start;">
-      <div>
-        <div class="label reveal" style="margin-bottom:1.25rem;">Operational Focus</div>
-        <h2 class="reveal d1" style="font-size:clamp(1.7rem,2.8vw,2.4rem);margin-bottom:1.25rem;">What We Focus On</h2>
-        <p class="reveal d2" style="font-size:0.88rem;color:var(--text-2);line-height:1.8;">Our operational scope is deliberately bounded. We focus on the areas where geospatial expertise produces the highest institutional value — and where the gap between generalist mapping and specialist spatial intelligence is most consequential.</p>
-      </div>
-      <div>
-        <div class="step reveal">
-          <div class="step-num">01</div>
+    <!-- MISSION -->
+    <section class="section" style="background: var(--bg-primary)">
+      <div class="container">
+        <div class="grid-1-1" style="gap: 6rem; align-items: start">
           <div>
-            <h4 style="font-size:1rem;font-weight:600;margin-bottom:0.45rem;font-family:'Playfair Display',serif;">Spatial Data Infrastructure</h4>
-            <p style="font-size:0.84rem;color:var(--text-2);line-height:1.72;">Design and deployment of enterprise SDI frameworks — including spatial databases, GIS servers, data governance structures, and interoperability standards — that enable organisations to manage and share spatial data at institutional scale.</p>
+            <div class="label reveal" style="margin-bottom: 1.25rem">
+              Mission
+            </div>
+            <h2
+              class="reveal d1"
+              style="
+                font-size: clamp(1.8rem, 3vw, 2.5rem);
+                margin-bottom: 1.5rem;
+              "
+            >
+              Advancing the Precision and Utility of Spatial Intelligence
+            </h2>
+            <p
+              class="reveal d2"
+              style="
+                font-size: 0.9rem;
+                color: var(--text-2);
+                line-height: 1.85;
+                margin-bottom: 1.25rem;
+              "
+            >
+              Airfree Geospatial Pty Ltd exists to deliver enterprise-grade
+              geospatial intelligence and infrastructure analytics to
+              organisations whose decisions depend on accurate, verifiable, and
+              spatially referenced information.
+            </p>
+            <p
+              class="reveal d3"
+              style="
+                font-size: 0.9rem;
+                color: var(--text-2);
+                line-height: 1.85;
+                margin-bottom: 1.25rem;
+              "
+            >
+              Our mission is to close the gap between raw spatial data and
+              actionable institutional intelligence — equipping government
+              bodies, infrastructure operators, and engineering firms with the
+              analytical systems, technical capacity, and decision-support
+              frameworks they require to manage complex spatial environments.
+            </p>
+            <p
+              class="reveal d4"
+              style="font-size: 0.9rem; color: var(--text-2); line-height: 1.85"
+            >
+              We operate at the highest level of geospatial technical practice,
+              applying peer-reviewed methodologies, validated data workflows,
+              and enterprise-tested architectures to every client engagement.
+            </p>
           </div>
-        </div>
-        <div class="step reveal d1">
-          <div class="step-num">02</div>
           <div>
-            <h4 style="font-size:1rem;font-weight:600;margin-bottom:0.45rem;font-family:'Playfair Display',serif;">Remote Sensing &amp; Change Detection</h4>
-            <p style="font-size:0.84rem;color:var(--text-2);line-height:1.72;">Multi-temporal analysis of satellite and aerial imagery to detect, quantify, and report on environmental, land cover, and infrastructure changes at scales ranging from individual asset sites to regional landscapes.</p>
+            <div
+              style="
+                background: var(--bg-card);
+                border: 1px solid var(--border-m);
+                padding: 2.5rem;
+                margin-bottom: 1.5rem;
+              "
+              class="reveal d1"
+            >
+              <div class="label" style="margin-bottom: 1rem">Our Position</div>
+              <h3
+                style="font-size: 1.1rem; margin-bottom: 1rem; font-weight: 600"
+              >
+                Enterprise Geospatial Intelligence &amp; Infrastructure
+                Analytics
+              </h3>
+              <p
+                style="
+                  font-size: 0.85rem;
+                  color: var(--text-2);
+                  line-height: 1.8;
+                "
+              >
+                We are not a general-purpose mapping company. Airfree Geospatial
+                is a specialised enterprise consultancy operating at the
+                intersection of spatial data science, engineering
+                infrastructure, and analytical systems architecture. Our clients
+                are organisations for whom spatial accuracy is a professional
+                and regulatory requirement, not a preference.
+              </p>
+            </div>
+            <div class="grid-1-1 reveal d2" style="gap: 1rem">
+              <div
+                style="
+                  background: var(--bg-card);
+                  border: 1px solid var(--border-s);
+                  padding: 1.5rem;
+                "
+              >
+                <div class="stat-val">PhD</div>
+                <div class="stat-lbl">Academic Expertise Level</div>
+              </div>
+              <div
+                style="
+                  background: var(--bg-card);
+                  border: 1px solid var(--border-s);
+                  padding: 1.5rem;
+                "
+              >
+                <div class="stat-val">7</div>
+                <div class="stat-lbl">Core Service Domains</div>
+              </div>
+              <div
+                style="
+                  background: var(--bg-card);
+                  border: 1px solid var(--border-s);
+                  padding: 1.5rem;
+                "
+              >
+                <div class="stat-val">8+</div>
+                <div class="stat-lbl">Industry Sectors Served</div>
+              </div>
+              <div
+                style="
+                  background: var(--bg-card);
+                  border: 1px solid var(--border-s);
+                  padding: 1.5rem;
+                "
+              >
+                <div class="stat-val">AU</div>
+                <div class="stat-lbl">ABN - 698093239 &mdash; Australia</div>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="step reveal d2">
-          <div class="step-num">03</div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- ENTERPRISE PHILOSOPHY -->
+    <section class="section" style="background: var(--bg-darkest)">
+      <div class="container">
+        <div class="label reveal" style="margin-bottom: 1.25rem">
+          Enterprise Philosophy
+        </div>
+        <div
+          class="grid-2-1"
+          style="gap: 5rem; align-items: start; margin-bottom: 3.5rem"
+        >
+          <h2 class="reveal d1" style="font-size: clamp(1.8rem, 3vw, 2.5rem)">
+            How We Approach Enterprise Geospatial Consultancy
+          </h2>
+          <p
+            class="reveal d2"
+            style="
+              font-size: 0.88rem;
+              color: var(--text-2);
+              line-height: 1.8;
+              padding-top: 0.5rem;
+            "
+          >
+            Our operating philosophy is defined by technical rigour,
+            institutional accountability, and a fundamental commitment to data
+            integrity across every engagement phase.
+          </p>
+        </div>
+
+        <div class="grid-cols-3" style="gap: 1.5rem">
+          <div class="card reveal">
+            <div class="accent-bar" style="margin-bottom: 1.25rem"></div>
+            <h3
+              style="
+                font-size: 1rem;
+                font-weight: 600;
+                margin-bottom: 0.75rem;
+                font-family: &quot;Playfair Display&quot;, serif;
+              "
+            >
+              Technical Primacy
+            </h3>
+            <p
+              style="
+                font-size: 0.84rem;
+                color: var(--text-2);
+                line-height: 1.75;
+              "
+            >
+              Every decision in our workflows is driven by technical best
+              practice, validated methodology, and verifiable accuracy metrics.
+              We do not trade precision for convenience.
+            </p>
+          </div>
+          <div class="card reveal d1">
+            <div class="accent-bar" style="margin-bottom: 1.25rem"></div>
+            <h3
+              style="
+                font-size: 1rem;
+                font-weight: 600;
+                margin-bottom: 0.75rem;
+                font-family: &quot;Playfair Display&quot;, serif;
+              "
+            >
+              Institutional Accountability
+            </h3>
+            <p
+              style="
+                font-size: 0.84rem;
+                color: var(--text-2);
+                line-height: 1.75;
+              "
+            >
+              Our deliverables are structured for audit, traceability, and
+              regulatory compliance. We maintain full documentation trails and
+              operate within established geospatial standards including ISO
+              19100 and OGC specifications.
+            </p>
+          </div>
+          <div class="card reveal d2">
+            <div class="accent-bar" style="margin-bottom: 1.25rem"></div>
+            <h3
+              style="
+                font-size: 1rem;
+                font-weight: 600;
+                margin-bottom: 0.75rem;
+                font-family: &quot;Playfair Display&quot;, serif;
+              "
+            >
+              Systems Thinking
+            </h3>
+            <p
+              style="
+                font-size: 0.84rem;
+                color: var(--text-2);
+                line-height: 1.75;
+              "
+            >
+              We approach each engagement as a systems challenge — understanding
+              upstream data sources, integration requirements, downstream
+              consumption environments, and long-term data governance
+              implications before recommending solutions.
+            </p>
+          </div>
+          <div class="card reveal d3">
+            <div class="accent-bar" style="margin-bottom: 1.25rem"></div>
+            <h3
+              style="
+                font-size: 1rem;
+                font-weight: 600;
+                margin-bottom: 0.75rem;
+                font-family: &quot;Playfair Display&quot;, serif;
+              "
+            >
+              Contextual Relevance
+            </h3>
+            <p
+              style="
+                font-size: 0.84rem;
+                color: var(--text-2);
+                line-height: 1.75;
+              "
+            >
+              Spatial data without operational context is noise. Our analytical
+              outputs are explicitly designed to address the decision
+              environments of our clients — not to demonstrate technical
+              capability in isolation.
+            </p>
+          </div>
+          <div class="card reveal d4">
+            <div class="accent-bar" style="margin-bottom: 1.25rem"></div>
+            <h3
+              style="
+                font-size: 1rem;
+                font-weight: 600;
+                margin-bottom: 0.75rem;
+                font-family: &quot;Playfair Display&quot;, serif;
+              "
+            >
+              Scalability by Design
+            </h3>
+            <p
+              style="
+                font-size: 0.84rem;
+                color: var(--text-2);
+                line-height: 1.75;
+              "
+            >
+              All architectures and data systems we deliver are designed for
+              enterprise-scale operation from inception — avoiding the costly
+              retrofitting that results from solutions built at a smaller scope
+              than their operational context requires.
+            </p>
+          </div>
+          <div class="card reveal d5">
+            <div class="accent-bar" style="margin-bottom: 1.25rem"></div>
+            <h3
+              style="
+                font-size: 1rem;
+                font-weight: 600;
+                margin-bottom: 0.75rem;
+                font-family: &quot;Playfair Display&quot;, serif;
+              "
+            >
+              Independent Verification
+            </h3>
+            <p
+              style="
+                font-size: 0.84rem;
+                color: var(--text-2);
+                line-height: 1.75;
+              "
+            >
+              We build independent verification stages into all analytical
+              workflows. QA/QC is not a final-stage gate — it is embedded
+              throughout data acquisition, processing, and output generation.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- OPERATIONAL FOCUS -->
+    <section class="section" style="background: var(--bg-secondary) grid-tex">
+      <div class="container">
+        <div class="grid-1-2" style="gap: 6rem; align-items: start">
           <div>
-            <h4 style="font-size:1rem;font-weight:600;margin-bottom:0.45rem;font-family:'Playfair Display',serif;">UAV Survey &amp; 3D Spatial Modelling</h4>
-            <p style="font-size:0.84rem;color:var(--text-2);line-height:1.72;">High-resolution drone-based survey operations delivering photogrammetric products — orthomosaics, point clouds, 3D surface models, and volumetric data — for construction, infrastructure, and environmental applications.</p>
+            <div class="label reveal" style="margin-bottom: 1.25rem">
+              Operational Focus
+            </div>
+            <h2
+              class="reveal d1"
+              style="
+                font-size: clamp(1.7rem, 2.8vw, 2.4rem);
+                margin-bottom: 1.25rem;
+              "
+            >
+              What We Focus On
+            </h2>
+            <p
+              class="reveal d2"
+              style="font-size: 0.88rem; color: var(--text-2); line-height: 1.8"
+            >
+              Our operational scope is deliberately bounded. We focus on the
+              areas where geospatial expertise produces the highest
+              institutional value — and where the gap between generalist mapping
+              and specialist spatial intelligence is most consequential.
+            </p>
           </div>
-        </div>
-        <div class="step reveal d3">
-          <div class="step-num">04</div>
           <div>
-            <h4 style="font-size:1rem;font-weight:600;margin-bottom:0.45rem;font-family:'Playfair Display',serif;">Infrastructure Asset Spatial Systems</h4>
-            <p style="font-size:0.84rem;color:var(--text-2);line-height:1.72;">Geospatial systems for utility and infrastructure asset management — enabling network tracing, condition mapping, regulatory reporting, and AM/FM integration for electricity, gas, water, and telecommunications operators.</p>
+            <div class="step reveal">
+              <div class="step-num">01</div>
+              <div>
+                <h4
+                  style="
+                    font-size: 1rem;
+                    font-weight: 600;
+                    margin-bottom: 0.45rem;
+                    font-family: &quot;Playfair Display&quot;, serif;
+                  "
+                >
+                  Spatial Data Infrastructure
+                </h4>
+                <p
+                  style="
+                    font-size: 0.84rem;
+                    color: var(--text-2);
+                    line-height: 1.72;
+                  "
+                >
+                  Design and deployment of enterprise SDI frameworks — including
+                  spatial databases, GIS servers, data governance structures,
+                  and interoperability standards — that enable organisations to
+                  manage and share spatial data at institutional scale.
+                </p>
+              </div>
+            </div>
+            <div class="step reveal d1">
+              <div class="step-num">02</div>
+              <div>
+                <h4
+                  style="
+                    font-size: 1rem;
+                    font-weight: 600;
+                    margin-bottom: 0.45rem;
+                    font-family: &quot;Playfair Display&quot;, serif;
+                  "
+                >
+                  Remote Sensing &amp; Change Detection
+                </h4>
+                <p
+                  style="
+                    font-size: 0.84rem;
+                    color: var(--text-2);
+                    line-height: 1.72;
+                  "
+                >
+                  Multi-temporal analysis of satellite and aerial imagery to
+                  detect, quantify, and report on environmental, land cover, and
+                  infrastructure changes at scales ranging from individual asset
+                  sites to regional landscapes.
+                </p>
+              </div>
+            </div>
+            <div class="step reveal d2">
+              <div class="step-num">03</div>
+              <div>
+                <h4
+                  style="
+                    font-size: 1rem;
+                    font-weight: 600;
+                    margin-bottom: 0.45rem;
+                    font-family: &quot;Playfair Display&quot;, serif;
+                  "
+                >
+                  UAV Survey &amp; 3D Spatial Modelling
+                </h4>
+                <p
+                  style="
+                    font-size: 0.84rem;
+                    color: var(--text-2);
+                    line-height: 1.72;
+                  "
+                >
+                  High-resolution drone-based survey operations delivering
+                  photogrammetric products — orthomosaics, point clouds, 3D
+                  surface models, and volumetric data — for construction,
+                  infrastructure, and environmental applications.
+                </p>
+              </div>
+            </div>
+            <div class="step reveal d3">
+              <div class="step-num">04</div>
+              <div>
+                <h4
+                  style="
+                    font-size: 1rem;
+                    font-weight: 600;
+                    margin-bottom: 0.45rem;
+                    font-family: &quot;Playfair Display&quot;, serif;
+                  "
+                >
+                  Infrastructure Asset Spatial Systems
+                </h4>
+                <p
+                  style="
+                    font-size: 0.84rem;
+                    color: var(--text-2);
+                    line-height: 1.72;
+                  "
+                >
+                  Geospatial systems for utility and infrastructure asset
+                  management — enabling network tracing, condition mapping,
+                  regulatory reporting, and AM/FM integration for electricity,
+                  gas, water, and telecommunications operators.
+                </p>
+              </div>
+            </div>
+            <div class="step reveal d4">
+              <div class="step-num">05</div>
+              <div>
+                <h4
+                  style="
+                    font-size: 1rem;
+                    font-weight: 600;
+                    margin-bottom: 0.45rem;
+                    font-family: &quot;Playfair Display&quot;, serif;
+                  "
+                >
+                  Environmental &amp; Carbon Spatial Analytics
+                </h4>
+                <p
+                  style="
+                    font-size: 0.84rem;
+                    color: var(--text-2);
+                    line-height: 1.72;
+                  "
+                >
+                  Scientifically grounded spatial analysis for carbon stock
+                  estimation, habitat mapping, biodiversity assessment, and
+                  environmental impact quantification — supporting compliance
+                  reporting and environmental markets.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="step reveal d4">
-          <div class="step-num">05</div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- LEADERSHIP -->
+    <section class="section" style="background: var(--bg-primary)">
+      <div class="container">
+        <div class="label reveal" style="margin-bottom: 1.25rem">
+          Leadership
+        </div>
+        <h2
+          class="reveal d1"
+          style="
+            font-size: clamp(1.7rem, 2.8vw, 2.4rem);
+            margin-bottom: 3rem;
+            max-width: 500px;
+          "
+        >
+          Technical Leadership &amp; Principal Consultancy
+        </h2>
+
+        <div
+          class="grid-auto-1 reveal d2"
+          style="
+            gap: 4rem;
+            align-items: start;
+            background: var(--bg-card);
+            border: 1px solid var(--border-m);
+            padding: 3rem;
+          "
+        >
+          <!-- Profile visual -->
+          <div style="width: 160px; flex-shrink: 0">
+            <div
+              style="
+                width: 160px;
+                height: 160px;
+                background: var(--bg-elevated);
+                border: 1px solid var(--border-h);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 1rem;
+              "
+            >
+              <div style="text-align: center">
+                <div
+                  style="
+                    font-family: &quot;IBM Plex Mono&quot;, monospace;
+                    font-size: 2rem;
+                    color: var(--accent-b);
+                    font-weight: 300;
+                  "
+                >
+                  UGN
+                </div>
+              </div>
+            </div>
+            <div
+              style="
+                font-family: &quot;IBM Plex Mono&quot;, monospace;
+                font-size: 0.58rem;
+                letter-spacing: 0.15em;
+                text-transform: uppercase;
+                color: var(--text-3);
+                text-align: center;
+                line-height: 1.6;
+              "
+            >
+              Lead Consultant<br />Principal Geospatial
+            </div>
+          </div>
+          <!-- Profile content -->
           <div>
-            <h4 style="font-size:1rem;font-weight:600;margin-bottom:0.45rem;font-family:'Playfair Display',serif;">Environmental &amp; Carbon Spatial Analytics</h4>
-            <p style="font-size:0.84rem;color:var(--text-2);line-height:1.72;">Scientifically grounded spatial analysis for carbon stock estimation, habitat mapping, biodiversity assessment, and environmental impact quantification — supporting compliance reporting and environmental markets.</p>
+            <div class="label" style="margin-bottom: 0.75rem">
+              Lead Consultant
+            </div>
+            <h3
+              style="
+                font-size: 1.5rem;
+                margin-bottom: 0.35rem;
+                font-weight: 600;
+              "
+            >
+              Uchechukwu Godwin Nnam
+            </h3>
+            <div
+              style="
+                font-family: &quot;IBM Plex Mono&quot;, monospace;
+                font-size: 0.7rem;
+                letter-spacing: 0.12em;
+                color: var(--accent-b);
+                text-transform: uppercase;
+                margin-bottom: 1.5rem;
+              "
+            >
+              Principal Geospatial Consultant &mdash; Airfree Geospatial Pty Ltd
+            </div>
+            <div class="divider" style="margin-bottom: 1.5rem"></div>
+            <p
+              style="
+                font-size: 0.88rem;
+                color: var(--text-2);
+                line-height: 1.85;
+                margin-bottom: 1.25rem;
+              "
+            >
+              Dr Nnam brings doctoral-level expertise in geospatial science to
+              the practice of enterprise spatial consulting. His academic and
+              applied research background spans spatial data infrastructure,
+              remote sensing analytics, UAV photogrammetry, and geospatial AI —
+              disciplines that collectively underpin Airfree Geospatial's full
+              service portfolio.
+            </p>
+            <p
+              style="
+                font-size: 0.88rem;
+                color: var(--text-2);
+                line-height: 1.85;
+                margin-bottom: 1.25rem;
+              "
+            >
+              As principal consultant, Dr Nnam leads technical strategy,
+              methodology development, and quality assurance across all client
+              engagements. His direct involvement in delivery ensures that the
+              academic rigour of peer-reviewed spatial science is applied
+              consistently to practical enterprise challenges.
+            </p>
+            <p
+              style="
+                font-size: 0.88rem;
+                color: var(--text-2);
+                line-height: 1.85;
+                margin-bottom: 1.75rem;
+              "
+            >
+              Dr Nnam's expertise positions Airfree Geospatial as a technically
+              authoritative partner for government, infrastructure, and
+              environmental clients who require both precision spatial outputs
+              and the consultancy capacity to interpret, contextualise, and act
+              on them.
+            </p>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem">
+              <span class="tech-tag">Spatial Data Infrastructure</span>
+              <span class="tech-tag">Remote Sensing Analytics</span>
+              <span class="tech-tag">UAV Photogrammetry</span>
+              <span class="tech-tag">Geospatial AI</span>
+              <span class="tech-tag">Enterprise GIS</span>
+              <span class="tech-tag">Environmental Spatial Analysis</span>
+              <span class="tech-tag">Carbon Analytics</span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          style="
+            margin-top: 2rem;
+            padding: 1.5rem 2rem;
+            border: 1px solid var(--border-s);
+            background: var(--bg-card);
+          "
+          class="reveal d3"
+        >
+          <p
+            style="
+              font-size: 0.82rem;
+              color: var(--text-3);
+              line-height: 1.7;
+              font-style: italic;
+            "
+          >
+            Note: Airfree Geospatial Pty Ltd operates as an enterprise
+            consultancy with a depth and scope of capability that extends beyond
+            any individual practitioner. Our service architecture, technical
+            frameworks, and delivery methodologies represent a comprehensive
+            institutional body of practice in geospatial intelligence and
+            infrastructure analytics.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section
+      style="
+        background: var(--bg-card);
+        border-top: 1px solid var(--border-s);
+        padding: 4rem 0;
+      "
+    >
+      <div class="container">
+        <div class="grid-auto" style="gap: 3rem; align-items: center">
+          <div class="reveal">
+            <h2
+              style="
+                font-size: clamp(1.4rem, 2.2vw, 1.9rem);
+                margin-bottom: 0.75rem;
+              "
+            >
+              Engage Airfree Geospatial for Your Organisation
+            </h2>
+            <p
+              style="
+                font-size: 0.88rem;
+                color: var(--text-2);
+                max-width: 520px;
+                line-height: 1.75;
+              "
+            >
+              Whether your requirement is a formal procurement process, a
+              specific technical engagement, or an initial capability assessment
+              — contact us to discuss how our spatial intelligence services
+              apply to your operational context.
+            </p>
+          </div>
+          <div
+            class="reveal d2"
+            style="
+              display: flex;
+              flex-direction: column;
+              gap: 1rem;
+              align-items: flex-end;
+            "
+          >
+            <a href="contact.html#capability" class="btn btn-gold"
+              >Request Capability Statement</a
+            >
+            <a href="services.html" class="btn btn-ghost">View Services</a>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<div class="divider"></div>
-
-<!-- LEADERSHIP -->
-<section class="section" style="background:var(--bg-primary);">
-  <div class="container">
-    <div class="label reveal" style="margin-bottom:1.25rem;">Leadership</div>
-    <h2 class="reveal d1" style="font-size:clamp(1.7rem,2.8vw,2.4rem);margin-bottom:3rem;max-width:500px;">Technical Leadership &amp; Principal Consultancy</h2>
-
-    <div class="grid-auto-1 reveal d2" style="gap:4rem;align-items:start;background:var(--bg-card);border:1px solid var(--border-m);padding:3rem;">
-      <!-- Profile visual -->
-      <div style="width:160px;flex-shrink:0;">
-        <div style="width:160px;height:160px;background:var(--bg-elevated);border:1px solid var(--border-h);display:flex;align-items:center;justify-content:center;margin-bottom:1rem;">
-          <div style="text-align:center;">
-            <div style="font-family:'IBM Plex Mono',monospace;font-size:2rem;color:var(--accent-b);font-weight:300;">UGN</div>
-          </div>
-        </div>
-        <div style="font-family:'IBM Plex Mono',monospace;font-size:0.58rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-3);text-align:center;line-height:1.6;">Lead Consultant<br>Principal Geospatial</div>
-      </div>
-      <!-- Profile content -->
-      <div>
-        <div class="label" style="margin-bottom:0.75rem;">Lead Consultant</div>
-        <h3 style="font-size:1.5rem;margin-bottom:0.35rem;font-weight:600;">Uchechukwu Godwin Nnam, Ph.D</h3>
-        <div style="font-family:'IBM Plex Mono',monospace;font-size:0.7rem;letter-spacing:0.12em;color:var(--accent-b);text-transform:uppercase;margin-bottom:1.5rem;">Principal Geospatial Consultant &mdash; Airfree Geospatial Pty Ltd</div>
-        <div class="divider" style="margin-bottom:1.5rem;"></div>
-        <p style="font-size:0.88rem;color:var(--text-2);line-height:1.85;margin-bottom:1.25rem;">Dr Nnam brings doctoral-level expertise in geospatial science to the practice of enterprise spatial consulting. His academic and applied research background spans spatial data infrastructure, remote sensing analytics, UAV photogrammetry, and geospatial AI — disciplines that collectively underpin Airfree Geospatial's full service portfolio.</p>
-        <p style="font-size:0.88rem;color:var(--text-2);line-height:1.85;margin-bottom:1.25rem;">As principal consultant, Dr Nnam leads technical strategy, methodology development, and quality assurance across all client engagements. His direct involvement in delivery ensures that the academic rigour of peer-reviewed spatial science is applied consistently to practical enterprise challenges.</p>
-        <p style="font-size:0.88rem;color:var(--text-2);line-height:1.85;margin-bottom:1.75rem;">Dr Nnam's expertise positions Airfree Geospatial as a technically authoritative partner for government, infrastructure, and environmental clients who require both precision spatial outputs and the consultancy capacity to interpret, contextualise, and act on them.</p>
-        <div style="display:flex;flex-wrap:wrap;gap:0.5rem;">
-          <span class="tech-tag">Spatial Data Infrastructure</span>
-          <span class="tech-tag">Remote Sensing Analytics</span>
-          <span class="tech-tag">UAV Photogrammetry</span>
-          <span class="tech-tag">Geospatial AI</span>
-          <span class="tech-tag">Enterprise GIS</span>
-          <span class="tech-tag">Environmental Spatial Analysis</span>
-          <span class="tech-tag">Carbon Analytics</span>
-        </div>
-      </div>
-    </div>
-
-    <div style="margin-top:2rem;padding:1.5rem 2rem;border:1px solid var(--border-s);background:var(--bg-card);" class="reveal d3">
-      <p style="font-size:0.82rem;color:var(--text-3);line-height:1.7;font-style:italic;">Note: Airfree Geospatial Pty Ltd operates as an enterprise consultancy with a depth and scope of capability that extends beyond any individual practitioner. Our service architecture, technical frameworks, and delivery methodologies represent a comprehensive institutional body of practice in geospatial intelligence and infrastructure analytics.</p>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section style="background:var(--bg-card);border-top:1px solid var(--border-s);padding:4rem 0;">
-  <div class="container">
-    <div class="grid-auto" style="gap:3rem;align-items:center;">
-      <div class="reveal">
-        <h2 style="font-size:clamp(1.4rem,2.2vw,1.9rem);margin-bottom:0.75rem;">Engage Airfree Geospatial for Your Organisation</h2>
-        <p style="font-size:0.88rem;color:var(--text-2);max-width:520px;line-height:1.75;">Whether your requirement is a formal procurement process, a specific technical engagement, or an initial capability assessment — contact us to discuss how our spatial intelligence services apply to your operational context.</p>
-      </div>
-      <div class="reveal d2" style="display:flex;flex-direction:column;gap:1rem;align-items:flex-end;">
-        <a href="contact.html#capability" class="btn btn-gold">Request Capability Statement</a>
-        <a href="services.html" class="btn btn-ghost">View Services</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<script src="js/main.js"></script>
-</body>
+    <script src="js/main.js"></script>
+  </body>
 </html>

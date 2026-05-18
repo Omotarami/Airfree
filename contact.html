@@ -1,225 +1,732 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact — Airfree Geospatial Pty Ltd</title>
-  <meta name="description" content="Contact Airfree Geospatial Pty Ltd. Submit a project enquiry, request a capability statement, or initiate a consultation." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>tailwind.config={theme:{extend:{fontFamily:{serif:['Playfair Display','Georgia','serif'],sans:['Inter','system-ui','sans-serif'],mono:['IBM Plex Mono','monospace']}}}}</script>
-  <link rel="stylesheet" href="css/style.css" />
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact — Airfree Geospatial Pty Ltd</title>
+    <meta
+      name="description"
+      content="Contact Airfree Geospatial Pty Ltd. Submit a project enquiry, request a capability statement, or initiate a consultation."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              serif: ["Playfair Display", "Georgia", "serif"],
+              sans: ["Inter", "system-ui", "sans-serif"],
+              mono: ["IBM Plex Mono", "monospace"],
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <section class="page-hero">
+      <div class="page-hero-grid"></div>
+      <div class="container" style="position: relative; z-index: 2">
+        <div class="coord" style="margin-bottom: 1.25rem">
+          CONTACT &amp; ENQUIRIES &nbsp;|&nbsp; AIRFREE GEOSPATIAL PTY LTD
+          &nbsp;|&nbsp; AUSTRALIA
+        </div>
+        <div class="label reveal" style="margin-bottom: 1rem">Contact</div>
+        <h1
+          class="reveal d1"
+          style="font-size: clamp(2rem, 4vw, 3.2rem); margin-bottom: 1rem"
+        >
+          Initiate an Enquiry
+        </h1>
+        <p
+          class="reveal d2"
+          style="
+            font-size: 0.9rem;
+            color: var(--text-2);
+            max-width: 600px;
+            line-height: 1.8;
+          "
+        >
+          For project enquiries, capability statement requests, procurement
+          discussions, or technical consultations — use the form below or
+          contact us directly. We respond to all substantive enquiries within
+          two business days.
+        </p>
+      </div>
+    </section>
 
-<section class="page-hero">
-  <div class="page-hero-grid"></div>
-  <div class="container" style="position:relative;z-index:2;">
-    <div class="coord" style="margin-bottom:1.25rem;">CONTACT &amp; ENQUIRIES &nbsp;|&nbsp; AIRFREE GEOSPATIAL PTY LTD &nbsp;|&nbsp; AUSTRALIA</div>
-    <div class="label reveal" style="margin-bottom:1rem;">Contact</div>
-    <h1 class="reveal d1" style="font-size:clamp(2rem,4vw,3.2rem);margin-bottom:1rem;">Initiate an Enquiry</h1>
-    <p class="reveal d2" style="font-size:0.9rem;color:var(--text-2);max-width:600px;line-height:1.8;">For project enquiries, capability statement requests, procurement discussions, or technical consultations — use the form below or contact us directly. We respond to all substantive enquiries within two business days.</p>
-  </div>
-</section>
+    <!-- CONTACT MAIN -->
+    <section class="section" style="background: var(--bg-primary)">
+      <div class="container">
+        <div class="grid-1-2" style="gap: 5rem; align-items: start">
+          <!-- Contact details -->
+          <div>
+            <div class="label reveal" style="margin-bottom: 1.25rem">
+              Direct Contact
+            </div>
 
-<!-- CONTACT MAIN -->
-<section class="section" style="background:var(--bg-primary);">
-  <div class="container">
-    <div class="grid-1-2" style="gap:5rem;align-items:start;">
+            <div
+              style="display: flex; flex-direction: column; gap: 0"
+              class="reveal d1"
+            >
+              <div class="step">
+                <div class="step-num">01</div>
+                <div>
+                  <div
+                    style="
+                      font-size: 0.65rem;
+                      letter-spacing: 0.14em;
+                      text-transform: uppercase;
+                      color: var(--text-3);
+                      margin-bottom: 0.35rem;
+                      font-family: &quot;IBM Plex Mono&quot;, monospace;
+                    "
+                  >
+                    Email
+                  </div>
+                  <div style="font-size: 0.95rem; color: var(--text-1)">
+                    info@airfreegeospatial.com.au
+                  </div>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-num">02</div>
+                <div>
+                  <div
+                    style="
+                      font-size: 0.65rem;
+                      letter-spacing: 0.14em;
+                      text-transform: uppercase;
+                      color: var(--text-3);
+                      margin-bottom: 0.35rem;
+                      font-family: &quot;IBM Plex Mono&quot;, monospace;
+                    "
+                  >
+                    Location
+                  </div>
+                  <div style="font-size: 0.95rem; color: var(--text-1)">
+                    Australia
+                  </div>
+                  <div
+                    style="
+                      font-size: 0.8rem;
+                      color: var(--text-2);
+                      margin-top: 0.2rem;
+                    "
+                  >
+                    ABN - 698093239 &mdash; Australian Business
+                  </div>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-num">03</div>
+                <div>
+                  <div
+                    style="
+                      font-size: 0.65rem;
+                      letter-spacing: 0.14em;
+                      text-transform: uppercase;
+                      color: var(--text-3);
+                      margin-bottom: 0.35rem;
+                      font-family: &quot;IBM Plex Mono&quot;, monospace;
+                    "
+                  >
+                    Response Time
+                  </div>
+                  <div style="font-size: 0.95rem; color: var(--text-1)">
+                    Within 2 Business Days
+                  </div>
+                  <div
+                    style="
+                      font-size: 0.8rem;
+                      color: var(--text-2);
+                      margin-top: 0.2rem;
+                    "
+                  >
+                    For all substantive project enquiries
+                  </div>
+                </div>
+              </div>
+              <div class="step">
+                <div class="step-num">04</div>
+                <div>
+                  <div
+                    style="
+                      font-size: 0.65rem;
+                      letter-spacing: 0.14em;
+                      text-transform: uppercase;
+                      color: var(--text-3);
+                      margin-bottom: 0.35rem;
+                      font-family: &quot;IBM Plex Mono&quot;, monospace;
+                    "
+                  >
+                    Procurement
+                  </div>
+                  <div style="font-size: 0.95rem; color: var(--text-1)">
+                    Procurement-Ready
+                  </div>
+                  <div
+                    style="
+                      font-size: 0.8rem;
+                      color: var(--text-2);
+                      margin-top: 0.2rem;
+                    "
+                  >
+                    Formal capability statements available on request
+                  </div>
+                </div>
+              </div>
+            </div>
 
-      <!-- Contact details -->
-      <div>
-        <div class="label reveal" style="margin-bottom:1.25rem;">Direct Contact</div>
-
-        <div style="display:flex;flex-direction:column;gap:0;" class="reveal d1">
-          <div class="step">
-            <div class="step-num">01</div>
-            <div>
-              <div style="font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-3);margin-bottom:0.35rem;font-family:'IBM Plex Mono',monospace;">Email</div>
-              <div style="font-size:0.95rem;color:var(--text-1);">info@airfreegeospatial.com.au</div>
+            <div
+              style="
+                margin-top: 2rem;
+                padding: 1.5rem;
+                background: var(--bg-card);
+                border: 1px solid var(--border-s);
+              "
+              class="reveal d2"
+            >
+              <div
+                style="
+                  font-family: &quot;IBM Plex Mono&quot;, monospace;
+                  font-size: 0.6rem;
+                  letter-spacing: 0.15em;
+                  text-transform: uppercase;
+                  color: var(--accent-b);
+                  margin-bottom: 0.85rem;
+                "
+              >
+                Enquiry Types We Accept
+              </div>
+              <ul
+                style="
+                  list-style: none;
+                  display: flex;
+                  flex-direction: column;
+                  gap: 0.5rem;
+                "
+              >
+                <li
+                  style="
+                    font-size: 0.83rem;
+                    color: var(--text-2);
+                    display: flex;
+                    gap: 0.75rem;
+                    align-items: baseline;
+                  "
+                >
+                  <span
+                    style="
+                      color: var(--accent-b);
+                      font-family: &quot;IBM Plex Mono&quot;, monospace;
+                      font-size: 0.7rem;
+                    "
+                    >—</span
+                  >Project-specific geospatial service requirements
+                </li>
+                <li
+                  style="
+                    font-size: 0.83rem;
+                    color: var(--text-2);
+                    display: flex;
+                    gap: 0.75rem;
+                    align-items: baseline;
+                  "
+                >
+                  <span
+                    style="
+                      color: var(--accent-b);
+                      font-family: &quot;IBM Plex Mono&quot;, monospace;
+                      font-size: 0.7rem;
+                    "
+                    >—</span
+                  >Capability statement and procurement panel requests
+                </li>
+                <li
+                  style="
+                    font-size: 0.83rem;
+                    color: var(--text-2);
+                    display: flex;
+                    gap: 0.75rem;
+                    align-items: baseline;
+                  "
+                >
+                  <span
+                    style="
+                      color: var(--accent-b);
+                      font-family: &quot;IBM Plex Mono&quot;, monospace;
+                      font-size: 0.7rem;
+                    "
+                    >—</span
+                  >Technical consultation and scoping discussions
+                </li>
+                <li
+                  style="
+                    font-size: 0.83rem;
+                    color: var(--text-2);
+                    display: flex;
+                    gap: 0.75rem;
+                    align-items: baseline;
+                  "
+                >
+                  <span
+                    style="
+                      color: var(--accent-b);
+                      font-family: &quot;IBM Plex Mono&quot;, monospace;
+                      font-size: 0.7rem;
+                    "
+                    >—</span
+                  >Government tender and pre-qualification enquiries
+                </li>
+                <li
+                  style="
+                    font-size: 0.83rem;
+                    color: var(--text-2);
+                    display: flex;
+                    gap: 0.75rem;
+                    align-items: baseline;
+                  "
+                >
+                  <span
+                    style="
+                      color: var(--accent-b);
+                      font-family: &quot;IBM Plex Mono&quot;, monospace;
+                      font-size: 0.7rem;
+                    "
+                    >—</span
+                  >Retainer and ongoing advisory arrangements
+                </li>
+                <li
+                  style="
+                    font-size: 0.83rem;
+                    color: var(--text-2);
+                    display: flex;
+                    gap: 0.75rem;
+                    align-items: baseline;
+                  "
+                >
+                  <span
+                    style="
+                      color: var(--accent-b);
+                      font-family: &quot;IBM Plex Mono&quot;, monospace;
+                      font-size: 0.7rem;
+                    "
+                    >—</span
+                  >Independent technical review and spatial QA/QC
+                </li>
+              </ul>
             </div>
           </div>
-          <div class="step">
-            <div class="step-num">02</div>
-            <div>
-              <div style="font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-3);margin-bottom:0.35rem;font-family:'IBM Plex Mono',monospace;">Jurisdiction</div>
-              <div style="font-size:0.95rem;color:var(--text-1);">Australia</div>
-              <div style="font-size:0.8rem;color:var(--text-2);margin-top:0.2rem;">ABN Registered &mdash; Australian Business</div>
+
+          <!-- Form -->
+          <div class="reveal d1">
+            <div
+              style="
+                font-family: &quot;IBM Plex Mono&quot;, monospace;
+                font-size: 0.6rem;
+                letter-spacing: 0.18em;
+                text-transform: uppercase;
+                color: var(--accent-b);
+                margin-bottom: 1.5rem;
+              "
+            >
+              Project Enquiry Form
             </div>
+            <form
+              style="display: flex; flex-direction: column; gap: 1.25rem"
+              onsubmit="return false;"
+            >
+              <div class="grid-1-1" style="gap: 1.25rem">
+                <div class="form-group">
+                  <label class="form-label">Given Name *</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="First name"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Surname *</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Last name"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Organisation / Agency *</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Organisation or government body"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Position / Role</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Your title or role"
+                />
+              </div>
+              <div class="grid-1-1" style="gap: 1.25rem">
+                <div class="form-group">
+                  <label class="form-label">Email Address *</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="your@organisation.gov.au"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Phone</label>
+                  <input
+                    type="tel"
+                    class="form-control"
+                    placeholder="+61 x xxxx xxxx"
+                  />
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Enquiry Type *</label>
+                <select class="form-control" required>
+                  <option value="" disabled selected>
+                    Select enquiry type
+                  </option>
+                  <option>Project Enquiry — New Service Requirement</option>
+                  <option>Capability Statement Request</option>
+                  <option>Government Procurement / Panel Registration</option>
+                  <option>Technical Consultation</option>
+                  <option>Retainer / Advisory Arrangement</option>
+                  <option>Independent Technical Review</option>
+                  <option>General Information</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Service Area</label>
+                <select class="form-control">
+                  <option value="" disabled selected>
+                    Select primary service area (if applicable)
+                  </option>
+                  <option>
+                    Enterprise GIS &amp; Spatial Infrastructure Systems
+                  </option>
+                  <option>Digital Mapping &amp; Web GIS Platforms</option>
+                  <option>
+                    Drone, Photogrammetry &amp; 3D Spatial Engineering
+                  </option>
+                  <option>Remote Sensing &amp; Geospatial AI Analytics</option>
+                  <option>Infrastructure &amp; Utility Spatial Systems</option>
+                  <option>Survey Data Engineering &amp; Spatial QA/QC</option>
+                  <option>
+                    Environmental Intelligence &amp; Carbon Analytics
+                  </option>
+                  <option>Multiple / Not yet determined</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label"
+                  >Project Description / Enquiry Details *</label
+                >
+                <textarea
+                  class="form-control"
+                  placeholder="Please describe your project, data requirements, technical constraints, timeline, or any other relevant information that will help us provide an accurate and useful response."
+                  required
+                  style="min-height: 160px"
+                ></textarea>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Estimated Timeline</label>
+                <select class="form-control">
+                  <option value="" disabled selected>
+                    Project timeline (if known)
+                  </option>
+                  <option>Immediate — within 4 weeks</option>
+                  <option>Short-term — 1 to 3 months</option>
+                  <option>Medium-term — 3 to 6 months</option>
+                  <option>Long-term — 6 to 12 months</option>
+                  <option>Strategic / Ongoing</option>
+                  <option>Not yet determined</option>
+                </select>
+              </div>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                style="align-self: flex-start"
+              >
+                Submit Enquiry &rarr;
+              </button>
+              <p
+                style="
+                  font-size: 0.74rem;
+                  color: var(--text-3);
+                  line-height: 1.65;
+                "
+              >
+                All information submitted is treated in strict confidence. We
+                will contact you within two business days to acknowledge your
+                enquiry and, where appropriate, arrange a consultation.
+              </p>
+            </form>
           </div>
-          <div class="step">
-            <div class="step-num">03</div>
-            <div>
-              <div style="font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-3);margin-bottom:0.35rem;font-family:'IBM Plex Mono',monospace;">Response Time</div>
-              <div style="font-size:0.95rem;color:var(--text-1);">Within 2 Business Days</div>
-              <div style="font-size:0.8rem;color:var(--text-2);margin-top:0.2rem;">For all substantive project enquiries</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAPABILITY STATEMENT SECTION -->
+    <section
+      id="capability"
+      class="section grid-tex"
+      style="background: var(--bg-darkest)"
+    >
+      <div class="container">
+        <div class="grid-1-1" style="gap: 6rem; align-items: start">
+          <div>
+            <div class="label reveal" style="margin-bottom: 1.25rem">
+              Procurement
             </div>
+            <h2
+              class="reveal d1"
+              style="
+                font-size: clamp(1.7rem, 2.8vw, 2.4rem);
+                margin-bottom: 1.25rem;
+              "
+            >
+              Request a Formal Capability Statement
+            </h2>
+            <p
+              class="reveal d2"
+              style="
+                font-size: 0.9rem;
+                color: var(--text-2);
+                line-height: 1.82;
+                margin-bottom: 1.25rem;
+              "
+            >
+              Our formal capability statement is a structured document prepared
+              for government procurement, enterprise tendering, and panel
+              registration processes. It provides a comprehensive, auditable
+              summary of:
+            </p>
+            <ul
+              style="
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                gap: 0.6rem;
+                margin-bottom: 1.75rem;
+              "
+              class="reveal d3"
+            >
+              <li
+                style="
+                  font-size: 0.85rem;
+                  color: var(--text-2);
+                  display: flex;
+                  gap: 0.75rem;
+                "
+              >
+                <span
+                  style="
+                    color: var(--accent-b);
+                    margin-top: 2px;
+                    flex-shrink: 0;
+                  "
+                  >&#9632;</span
+                >Technical competencies and service scope across all seven
+                service domains
+              </li>
+              <li
+                style="
+                  font-size: 0.85rem;
+                  color: var(--text-2);
+                  display: flex;
+                  gap: 0.75rem;
+                "
+              >
+                <span
+                  style="
+                    color: var(--accent-b);
+                    margin-top: 2px;
+                    flex-shrink: 0;
+                  "
+                  >&#9632;</span
+                >Methodological frameworks and quality assurance processes
+              </li>
+              <li
+                style="
+                  font-size: 0.85rem;
+                  color: var(--text-2);
+                  display: flex;
+                  gap: 0.75rem;
+                "
+              >
+                <span
+                  style="
+                    color: var(--accent-b);
+                    margin-top: 2px;
+                    flex-shrink: 0;
+                  "
+                  >&#9632;</span
+                >Technology platforms and data standards compliance
+              </li>
+              <li
+                style="
+                  font-size: 0.85rem;
+                  color: var(--text-2);
+                  display: flex;
+                  gap: 0.75rem;
+                "
+              >
+                <span
+                  style="
+                    color: var(--accent-b);
+                    margin-top: 2px;
+                    flex-shrink: 0;
+                  "
+                  >&#9632;</span
+                >Lead consultant qualifications and professional credentials
+              </li>
+              <li
+                style="
+                  font-size: 0.85rem;
+                  color: var(--text-2);
+                  display: flex;
+                  gap: 0.75rem;
+                "
+              >
+                <span
+                  style="
+                    color: var(--accent-b);
+                    margin-top: 2px;
+                    flex-shrink: 0;
+                  "
+                  >&#9632;</span
+                >Engagement models, pricing structures, and terms
+              </li>
+              <li
+                style="
+                  font-size: 0.85rem;
+                  color: var(--text-2);
+                  display: flex;
+                  gap: 0.75rem;
+                "
+              >
+                <span
+                  style="
+                    color: var(--accent-b);
+                    margin-top: 2px;
+                    flex-shrink: 0;
+                  "
+                  >&#9632;</span
+                >ABN registration and business compliance information
+              </li>
+            </ul>
+            <a
+              href="mailto:info@airfreegeospatial.com.au?subject=Capability Statement Request"
+              class="btn btn-gold reveal d4"
+              >Request via Email</a
+            >
           </div>
-          <div class="step">
-            <div class="step-num">04</div>
-            <div>
-              <div style="font-size:0.65rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-3);margin-bottom:0.35rem;font-family:'IBM Plex Mono',monospace;">Procurement</div>
-              <div style="font-size:0.95rem;color:var(--text-1);">Procurement-Ready</div>
-              <div style="font-size:0.8rem;color:var(--text-2);margin-top:0.2rem;">Formal capability statements available on request</div>
+          <div class="reveal d2">
+            <div
+              style="
+                background: var(--bg-card);
+                border: 1px solid var(--border-m);
+                padding: 2.5rem;
+              "
+            >
+              <div
+                style="
+                  font-family: &quot;IBM Plex Mono&quot;, monospace;
+                  font-size: 0.6rem;
+                  letter-spacing: 0.18em;
+                  text-transform: uppercase;
+                  color: var(--accent-b);
+                  margin-bottom: 1.25rem;
+                "
+              >
+                Capability Statement Request Form
+              </div>
+              <form
+                style="display: flex; flex-direction: column; gap: 1rem"
+                onsubmit="return false;"
+              >
+                <div class="form-group">
+                  <label class="form-label">Full Name *</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Name and surname"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Organisation *</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Government body or company"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Email *</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Official email address"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Purpose</label>
+                  <select class="form-control">
+                    <option value="" disabled selected>
+                      Purpose of request
+                    </option>
+                    <option>Government Procurement / RFT</option>
+                    <option>Panel Registration</option>
+                    <option>Enterprise Vendor Assessment</option>
+                    <option>Due Diligence</option>
+                    <option>General Capability Assessment</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Additional Notes</label>
+                  <textarea
+                    class="form-control"
+                    placeholder="Any specific sections or formats required"
+                    style="min-height: 80px"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn-gold"
+                  style="align-self: flex-start; margin-top: 0.25rem"
+                >
+                  Request Capability Statement &rarr;
+                </button>
+              </form>
             </div>
           </div>
         </div>
-
-        <div style="margin-top:2rem;padding:1.5rem;background:var(--bg-card);border:1px solid var(--border-s);" class="reveal d2">
-          <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--accent-b);margin-bottom:0.85rem;">Enquiry Types We Accept</div>
-          <ul style="list-style:none;display:flex;flex-direction:column;gap:0.5rem;">
-            <li style="font-size:0.83rem;color:var(--text-2);display:flex;gap:0.75rem;align-items:baseline;"><span style="color:var(--accent-b);font-family:'IBM Plex Mono',monospace;font-size:0.7rem;">—</span>Project-specific geospatial service requirements</li>
-            <li style="font-size:0.83rem;color:var(--text-2);display:flex;gap:0.75rem;align-items:baseline;"><span style="color:var(--accent-b);font-family:'IBM Plex Mono',monospace;font-size:0.7rem;">—</span>Capability statement and procurement panel requests</li>
-            <li style="font-size:0.83rem;color:var(--text-2);display:flex;gap:0.75rem;align-items:baseline;"><span style="color:var(--accent-b);font-family:'IBM Plex Mono',monospace;font-size:0.7rem;">—</span>Technical consultation and scoping discussions</li>
-            <li style="font-size:0.83rem;color:var(--text-2);display:flex;gap:0.75rem;align-items:baseline;"><span style="color:var(--accent-b);font-family:'IBM Plex Mono',monospace;font-size:0.7rem;">—</span>Government tender and pre-qualification enquiries</li>
-            <li style="font-size:0.83rem;color:var(--text-2);display:flex;gap:0.75rem;align-items:baseline;"><span style="color:var(--accent-b);font-family:'IBM Plex Mono',monospace;font-size:0.7rem;">—</span>Retainer and ongoing advisory arrangements</li>
-            <li style="font-size:0.83rem;color:var(--text-2);display:flex;gap:0.75rem;align-items:baseline;"><span style="color:var(--accent-b);font-family:'IBM Plex Mono',monospace;font-size:0.7rem;">—</span>Independent technical review and spatial QA/QC</li>
-          </ul>
-        </div>
       </div>
+    </section>
 
-      <!-- Form -->
-      <div class="reveal d1">
-        <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent-b);margin-bottom:1.5rem;">Project Enquiry Form</div>
-        <form style="display:flex;flex-direction:column;gap:1.25rem;" onsubmit="return false;">
-          <div class="grid-1-1" style="gap:1.25rem;">
-            <div class="form-group">
-              <label class="form-label">Given Name *</label>
-              <input type="text" class="form-control" placeholder="First name" required />
-            </div>
-            <div class="form-group">
-              <label class="form-label">Surname *</label>
-              <input type="text" class="form-control" placeholder="Last name" required />
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Organisation / Agency *</label>
-            <input type="text" class="form-control" placeholder="Organisation or government body" required />
-          </div>
-          <div class="form-group">
-            <label class="form-label">Position / Role</label>
-            <input type="text" class="form-control" placeholder="Your title or role" />
-          </div>
-          <div class="grid-1-1" style="gap:1.25rem;">
-            <div class="form-group">
-              <label class="form-label">Email Address *</label>
-              <input type="email" class="form-control" placeholder="your@organisation.gov.au" required />
-            </div>
-            <div class="form-group">
-              <label class="form-label">Phone</label>
-              <input type="tel" class="form-control" placeholder="+61 x xxxx xxxx" />
-            </div>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Enquiry Type *</label>
-            <select class="form-control" required>
-              <option value="" disabled selected>Select enquiry type</option>
-              <option>Project Enquiry — New Service Requirement</option>
-              <option>Capability Statement Request</option>
-              <option>Government Procurement / Panel Registration</option>
-              <option>Technical Consultation</option>
-              <option>Retainer / Advisory Arrangement</option>
-              <option>Independent Technical Review</option>
-              <option>General Information</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Service Area</label>
-            <select class="form-control">
-              <option value="" disabled selected>Select primary service area (if applicable)</option>
-              <option>Enterprise GIS &amp; Spatial Infrastructure Systems</option>
-              <option>Digital Mapping &amp; Web GIS Platforms</option>
-              <option>Drone, Photogrammetry &amp; 3D Spatial Engineering</option>
-              <option>Remote Sensing &amp; Geospatial AI Analytics</option>
-              <option>Infrastructure &amp; Utility Spatial Systems</option>
-              <option>Survey Data Engineering &amp; Spatial QA/QC</option>
-              <option>Environmental Intelligence &amp; Carbon Analytics</option>
-              <option>Multiple / Not yet determined</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Project Description / Enquiry Details *</label>
-            <textarea class="form-control" placeholder="Please describe your project, data requirements, technical constraints, timeline, or any other relevant information that will help us provide an accurate and useful response." required style="min-height:160px;"></textarea>
-          </div>
-          <div class="form-group">
-            <label class="form-label">Estimated Timeline</label>
-            <select class="form-control">
-              <option value="" disabled selected>Project timeline (if known)</option>
-              <option>Immediate — within 4 weeks</option>
-              <option>Short-term — 1 to 3 months</option>
-              <option>Medium-term — 3 to 6 months</option>
-              <option>Long-term — 6 to 12 months</option>
-              <option>Strategic / Ongoing</option>
-              <option>Not yet determined</option>
-            </select>
-          </div>
-          <button type="submit" class="btn btn-primary" style="align-self:flex-start;">Submit Enquiry &rarr;</button>
-          <p style="font-size:0.74rem;color:var(--text-3);line-height:1.65;">All information submitted is treated in strict confidence. We will contact you within two business days to acknowledge your enquiry and, where appropriate, arrange a consultation.</p>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CAPABILITY STATEMENT SECTION -->
-<section id="capability" class="section grid-tex" style="background:var(--bg-darkest);">
-  <div class="container">
-    <div class="grid-1-1" style="gap:6rem;align-items:start;">
-      <div>
-        <div class="label reveal" style="margin-bottom:1.25rem;">Procurement</div>
-        <h2 class="reveal d1" style="font-size:clamp(1.7rem,2.8vw,2.4rem);margin-bottom:1.25rem;">Request a Formal Capability Statement</h2>
-        <p class="reveal d2" style="font-size:0.9rem;color:var(--text-2);line-height:1.82;margin-bottom:1.25rem;">Our formal capability statement is a structured document prepared for government procurement, enterprise tendering, and panel registration processes. It provides a comprehensive, auditable summary of:</p>
-        <ul style="list-style:none;display:flex;flex-direction:column;gap:0.6rem;margin-bottom:1.75rem;" class="reveal d3">
-          <li style="font-size:0.85rem;color:var(--text-2);display:flex;gap:0.75rem;"><span style="color:var(--accent-b);margin-top:2px;flex-shrink:0;">&#9632;</span>Technical competencies and service scope across all seven service domains</li>
-          <li style="font-size:0.85rem;color:var(--text-2);display:flex;gap:0.75rem;"><span style="color:var(--accent-b);margin-top:2px;flex-shrink:0;">&#9632;</span>Methodological frameworks and quality assurance processes</li>
-          <li style="font-size:0.85rem;color:var(--text-2);display:flex;gap:0.75rem;"><span style="color:var(--accent-b);margin-top:2px;flex-shrink:0;">&#9632;</span>Technology platforms and data standards compliance</li>
-          <li style="font-size:0.85rem;color:var(--text-2);display:flex;gap:0.75rem;"><span style="color:var(--accent-b);margin-top:2px;flex-shrink:0;">&#9632;</span>Lead consultant qualifications and professional credentials</li>
-          <li style="font-size:0.85rem;color:var(--text-2);display:flex;gap:0.75rem;"><span style="color:var(--accent-b);margin-top:2px;flex-shrink:0;">&#9632;</span>Engagement models, pricing structures, and terms</li>
-          <li style="font-size:0.85rem;color:var(--text-2);display:flex;gap:0.75rem;"><span style="color:var(--accent-b);margin-top:2px;flex-shrink:0;">&#9632;</span>ABN registration and business compliance information</li>
-        </ul>
-        <a href="mailto:info@airfreegeospatial.com.au?subject=Capability Statement Request" class="btn btn-gold reveal d4">Request via Email</a>
-      </div>
-      <div class="reveal d2">
-        <div style="background:var(--bg-card);border:1px solid var(--border-m);padding:2.5rem;">
-          <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent-b);margin-bottom:1.25rem;">Capability Statement Request Form</div>
-          <form style="display:flex;flex-direction:column;gap:1rem;" onsubmit="return false;">
-            <div class="form-group">
-              <label class="form-label">Full Name *</label>
-              <input type="text" class="form-control" placeholder="Name and surname" required />
-            </div>
-            <div class="form-group">
-              <label class="form-label">Organisation *</label>
-              <input type="text" class="form-control" placeholder="Government body or company" required />
-            </div>
-            <div class="form-group">
-              <label class="form-label">Email *</label>
-              <input type="email" class="form-control" placeholder="Official email address" required />
-            </div>
-            <div class="form-group">
-              <label class="form-label">Purpose</label>
-              <select class="form-control">
-                <option value="" disabled selected>Purpose of request</option>
-                <option>Government Procurement / RFT</option>
-                <option>Panel Registration</option>
-                <option>Enterprise Vendor Assessment</option>
-                <option>Due Diligence</option>
-                <option>General Capability Assessment</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Additional Notes</label>
-              <textarea class="form-control" placeholder="Any specific sections or formats required" style="min-height:80px;"></textarea>
-            </div>
-            <button type="submit" class="btn btn-gold" style="align-self:flex-start;margin-top:0.25rem;">Request Capability Statement &rarr;</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<script src="js/main.js"></script>
-</body>
+    <script src="js/main.js"></script>
+  </body>
 </html>

@@ -5,39 +5,44 @@
 
 const BASE = (() => {
   const p = window.location.pathname;
-  return p.includes('/services/') ? '../' : './';
+  return p.includes("/services/") ? "../" : "./";
 })();
 
-const CURRENT = window.location.pathname.split('/').pop() || 'index.html';
+const CURRENT = window.location.pathname.split("/").pop() || "index.html";
 
 // ── Navigation links ──────────────────────────────────────────
 const NAV = [
-  { href: 'index.html',      label: 'Home' },
-  { href: 'about.html',      label: 'About' },
-  { href: 'services.html',   label: 'Services' },
-  { href: 'industries.html', label: 'Industries' },
-  { href: 'projects.html',   label: 'Projects' },
-  { href: 'technology.html', label: 'Technology' },
-  { href: 'contact.html',    label: 'Contact' },
+  {href: "index.html", label: "Home"},
+  {href: "about.html", label: "About"},
+  {href: "services.html", label: "Services"},
+  {href: "industries.html", label: "Industries"},
+  {href: "projects.html", label: "Projects"},
+  {href: "technology.html", label: "Technology"},
+  {href: "contact.html", label: "Contact"},
 ];
 
 function isActive(href) {
   if (CURRENT === href) return true;
-  if (CURRENT === '' && href === 'index.html') return true;
+  if (CURRENT === "" && href === "index.html") return true;
   // service pages: mark "Services" active
-  if (window.location.pathname.includes('/services/') && href === 'services.html') return true;
+  if (
+    window.location.pathname.includes("/services/") &&
+    href === "services.html"
+  )
+    return true;
   return false;
 }
 
 // ── Inject Navigation ─────────────────────────────────────────
 function injectNav() {
-  const linksHtml = NAV.map(l =>
-    `<a href="${BASE}${l.href}" class="nav-link ${isActive(l.href) ? 'active' : ''}">${l.label}</a>`
-  ).join('');
+  const linksHtml = NAV.map(
+    (l) =>
+      `<a href="${BASE}${l.href}" class="nav-link ${isActive(l.href) ? "active" : ""}">${l.label}</a>`,
+  ).join("");
 
-  const mobileHtml = NAV.map(l =>
-    `<a href="${BASE}${l.href}" class="mobile-nav-link">${l.label}</a>`
-  ).join('');
+  const mobileHtml = NAV.map(
+    (l) => `<a href="${BASE}${l.href}" class="mobile-nav-link">${l.label}</a>`,
+  ).join("");
 
   const navHtml = `
     <nav class="site-nav" id="site-nav">
@@ -64,39 +69,47 @@ function injectNav() {
       <button id="mobile-close" style="position:absolute;top:1.5rem;right:2rem;background:none;border:none;cursor:pointer;color:var(--text-2);font-size:1.4rem;">&#10005;</button>
     </div>`;
 
-  document.body.insertAdjacentHTML('afterbegin', navHtml);
-  document.getElementById('site-nav').insertAdjacentHTML('afterend', overlayHtml);
+  document.body.insertAdjacentHTML("afterbegin", navHtml);
+  document
+    .getElementById("site-nav")
+    .insertAdjacentHTML("afterend", overlayHtml);
 
-  const toggle = document.getElementById('nav-toggle');
-  const menu = document.getElementById('mobile-menu');
-  const close = document.getElementById('mobile-close');
-  toggle?.addEventListener('click', () => menu.classList.toggle('open'));
-  close?.addEventListener('click', () => menu.classList.remove('open'));
+  const toggle = document.getElementById("nav-toggle");
+  const menu = document.getElementById("mobile-menu");
+  const close = document.getElementById("mobile-close");
+  toggle?.addEventListener("click", () => menu.classList.toggle("open"));
+  close?.addEventListener("click", () => menu.classList.remove("open"));
 
   // scroll behaviour
-  window.addEventListener('scroll', () => {
-    const nav = document.getElementById('site-nav');
-    if (!nav) return;
-    nav.style.background = window.scrollY > 60
-      ? 'rgba(255,255,255,0.98)'
-      : 'white';
-  }, { passive: true });
+  window.addEventListener(
+    "scroll",
+    () => {
+      const nav = document.getElementById("site-nav");
+      if (!nav) return;
+      nav.style.background =
+        window.scrollY > 60 ? "rgba(255,255,255,0.98)" : "white";
+    },
+    {passive: true},
+  );
 }
 
 // ── Inject Footer ─────────────────────────────────────────────
 function injectFooter() {
   const year = new Date().getFullYear();
   const svcLinks = [
-    ['GIS &amp; Spatial Infrastructure',    'gis-spatial.html'],
-    ['Digital Mapping &amp; Web GIS',       'digital-mapping.html'],
-    ['Drone &amp; Photogrammetry',          'drone-photogrammetry.html'],
-    ['Remote Sensing &amp; AI Analytics',   'remote-sensing.html'],
-    ['Infrastructure &amp; Utilities',      'infrastructure-utility.html'],
-    ['Survey Data &amp; QA/QC',            'survey-data.html'],
-    ['Environmental Intelligence',          'environmental.html'],
-  ].map(([label, file]) =>
-    `<li><a href="${BASE}services/${file}" class="footer-link">${label}</a></li>`
-  ).join('');
+    ["GIS &amp; Spatial Infrastructure", "gis-spatial.html"],
+    ["Digital Mapping &amp; Web GIS", "digital-mapping.html"],
+    ["Drone &amp; Photogrammetry", "drone-photogrammetry.html"],
+    ["Remote Sensing &amp; AI Analytics", "remote-sensing.html"],
+    ["Infrastructure &amp; Utilities", "infrastructure-utility.html"],
+    ["Survey Data &amp; QA/QC", "survey-data.html"],
+    ["Environmental Intelligence", "environmental.html"],
+  ]
+    .map(
+      ([label, file]) =>
+        `<li><a href="${BASE}services/${file}" class="footer-link">${label}</a></li>`,
+    )
+    .join("");
 
   const html = `
     <footer class="site-footer" style="padding:4.5rem 0 2rem;">
@@ -120,27 +133,37 @@ function injectFooter() {
           <div>
             <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-3);margin-bottom:1.25rem;">Company</div>
             <ul style="list-style:none;display:flex;flex-direction:column;gap:0.7rem;">
-              ${['About','Industries','Projects','Technology','Contact'].map((l,_,a,href=l.toLowerCase()+'.html') =>
-                `<li><a href="${BASE}${l==='About'?'about':l==='Industries'?'industries':l==='Projects'?'projects':l==='Technology'?'technology':'contact'}.html" class="footer-link">${l}</a></li>`
-              ).join('')}
+              ${["About", "Industries", "Projects", "Technology", "Contact"]
+                .map(
+                  (l, _, a, href = l.toLowerCase() + ".html") =>
+                    `<li><a href="${BASE}${l === "About" ? "about" : l === "Industries" ? "industries" : l === "Projects" ? "projects" : l === "Technology" ? "technology" : "contact"}.html" class="footer-link">${l}</a></li>`,
+                )
+                .join("")}
             </ul>
           </div>
 
           <!-- Contact -->
           <div>
-            <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-3);margin-bottom:1.25rem;">Contact</div>
-            <div style="display:flex;flex-direction:column;gap:1rem;">
-              <div>
-                <div style="font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-3);margin-bottom:0.25rem;">Email</div>
-                <span style="font-size:0.83rem;color:var(--text-2);">info@airfreegeospatial.com.au</span>
-              </div>
-              <div>
-                <div style="font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-3);margin-bottom:0.25rem;">Jurisdiction</div>
-                <span style="font-size:0.83rem;color:var(--text-2);">Australia (ABN Registered)</span>
-              </div>
-              <a href="${BASE}contact.html#capability" class="btn btn-primary" style="font-size:0.68rem;padding:0.7rem 1.2rem;margin-top:0.5rem;">Request Capability Statement</a>
-            </div>
-          </div>
+  <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-3);margin-bottom:0.25rem;">
+    Locations
+  </div>
+
+  <div style="display:flex;flex-direction:column;gap:0.6rem;">
+
+    <span style="font-size:0.83rem;color:var(--text-2);">
+      35 Cassia street, Munno Para West, 5115, South Australia, Australia
+    </span>
+
+    <span style="font-size:0.83rem;color:var(--text-2);">
+      324 Settlement Road, Thomastown, 3072, Victoria, Australia
+    </span>
+
+    <span style="font-size:0.83rem;color:var(--text-2);">
+      8 Seddon Way, Canning Vale, 6155, Western Australia, Australia
+    </span>
+
+  </div>
+</div>
 
         </div>
         <div class="footer-bottom" style="display:flex;justify-content:space-between;align-items:center;padding-top:1.5rem;flex-wrap:wrap;gap:1rem;">
@@ -150,47 +173,115 @@ function injectFooter() {
           <div style="display:flex;gap:2rem;">
             <a href="#" class="footer-link" style="font-size:0.7rem;">Privacy Policy</a>
             <a href="#" class="footer-link" style="font-size:0.7rem;">Terms of Service</a>
-            <span style="font-size:0.7rem;color:var(--text-3);">ABN Registered &mdash; Australia</span>
+            <span style="font-size:0.7rem;color:var(--text-3);">ABN - 698093239 &mdash; Australia</span>
           </div>
         </div>
       </div>
     </footer>`;
 
-  document.body.insertAdjacentHTML('beforeend', html);
+  document.body.insertAdjacentHTML("beforeend", html);
 }
 
 // ── Hero Carousel ─────────────────────────────────────────────
 function initCarousel() {
-  const slides = document.querySelectorAll('.hero-slide');
+  const slides = document.querySelectorAll(".hero-slide");
   if (!slides.length) return;
   let cur = 0;
-  slides[0].classList.add('active');
+  slides[0].classList.add("active");
   setInterval(() => {
-    slides[cur].classList.remove('active');
+    slides[cur].classList.remove("active");
     cur = (cur + 1) % slides.length;
-    slides[cur].classList.add('active');
+    slides[cur].classList.add("active");
   }, 6500);
 }
 
 // ── Scroll Reveal ─────────────────────────────────────────────
 function initReveal() {
-  const els = document.querySelectorAll('.reveal');
+  const els = document.querySelectorAll(".reveal");
   if (!els.length) return;
-  const obs = new IntersectionObserver((entries) => {
-    entries.forEach(e => {
-      if (e.isIntersecting) {
-        e.target.classList.add('visible');
-        obs.unobserve(e.target);
-      }
-    });
-  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-  els.forEach(el => obs.observe(el));
+  const obs = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((e) => {
+        if (e.isIntersecting) {
+          e.target.classList.add("visible");
+          obs.unobserve(e.target);
+        }
+      });
+    },
+    {threshold: 0.08, rootMargin: "0px 0px -40px 0px"},
+  );
+  els.forEach((el) => obs.observe(el));
 }
 
+// ── Dynamic Coordinates + Location ─────────────────────────
+async function initCoordinates() {
+  const coordElement = document.getElementById("coordinates");
+
+  if (!coordElement) return;
+
+  if (!navigator.geolocation) {
+    coordElement.innerHTML = "Geolocation not supported";
+    return;
+  }
+
+  navigator.geolocation.getCurrentPosition(
+    async (position) => {
+      const lat = position.coords.latitude;
+      const lon = position.coords.longitude;
+
+      const latDirection = lat >= 0 ? "N" : "S";
+      const lonDirection = lon >= 0 ? "E" : "W";
+
+      const formattedLat = Math.abs(lat).toFixed(4);
+      const formattedLon = Math.abs(lon).toFixed(4);
+
+      try {
+        // Reverse geocoding
+        const response = await fetch(
+          `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`,
+        );
+
+        const data = await response.json();
+
+        const country = data.address.country_code?.toUpperCase() || "XX";
+
+        const state = data.address.state || data.address.region || "";
+
+        const city =
+          data.address.city ||
+          data.address.town ||
+          data.address.village ||
+          data.address.county ||
+          "";
+
+        // Create short city code
+        const cityCode = city.replace(/\s+/g, "").substring(0, 3).toUpperCase();
+
+        coordElement.innerHTML = `
+          ${formattedLat}&deg; ${latDirection}
+          &nbsp;
+          ${formattedLon}&deg; ${lonDirection}
+          &nbsp;/&nbsp;
+          ${country}-${cityCode}
+        `;
+      } catch (error) {
+        coordElement.innerHTML = `
+          ${formattedLat}&deg; ${latDirection}
+          &nbsp;
+          ${formattedLon}&deg; ${lonDirection}
+        `;
+      }
+    },
+    () => {
+      coordElement.innerHTML = "Location unavailable";
+    },
+  );
+}
 // ── Init ──────────────────────────────────────────────────────
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   injectNav();
   injectFooter();
   initCarousel();
   initReveal();
+  initCoordinates();
 });

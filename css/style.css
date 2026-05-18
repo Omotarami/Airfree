@@ -35,7 +35,7 @@ img, video, svg {
 }
  
 body {
-  font-family: 'Inter', -apple-system, sans-serif;
+  font-family: 'Manrope', -apple-system, sans-serif;
   background-color: var(--bg-dark);
   color: var(--text-1);
   line-height: 1.78;
@@ -77,7 +77,7 @@ img { max-width: 100%; display: block; }
 }
 
 .nav-img{
-  height: 50px;
+  height: 30px;
   width:auto;
 }
 .nav-logo-sub {
