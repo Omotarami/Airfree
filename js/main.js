@@ -18,16 +18,12 @@ const NAV = [
   {
     href: "services.html",
     label: "Services",
-    children: [{href: "technology.html", label: "Technology"}],
+    children: [{href: "industries.html", label: "Industries"}],
   },
 
   {
-    href: "industries.html",
-    label: "Industries",
-    children: [
-      {href: "industries.html#gov", label: "Government"},
-      {href: "industries.html#utilities", label: "Utilities"},
-    ],
+    href: "projects.html",
+    label: "Projects",
   },
 
   {href: "contact.html", label: "Contact"},
@@ -276,7 +272,7 @@ async function initCoordinates() {
 
       try {
         const res = await fetch(
-          `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`
+          `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`,
         );
 
         const data = await res.json();
@@ -289,7 +285,6 @@ async function initCoordinates() {
           "";
 
         locationText = `${country}${state ? " / " + state : ""}`;
-
       } catch (e) {
         locationText = "Location unavailable";
       }
@@ -301,7 +296,7 @@ async function initCoordinates() {
     },
     () => {
       coordElement.innerHTML = "Location unavailable";
-    }
+    },
   );
 }
 // ── Init ──────────────────────────────────────────────────────
