@@ -1,0 +1,194 @@
+/* ============================================================
+   Airfree Geospatial — Main JS
+   Nav/Footer injection, Carousel, Scroll animations
+   ============================================================ */
+
+const BASE = (() => {
+  const p = window.location.pathname;
+  return p.includes('/services/') ? '../' : './';
+})();
+
+const CURRENT = window.location.pathname.split('/').pop() || 'index.html';
+
+// ── Navigation links ──────────────────────────────────────────
+const NAV = [
+  { href: 'index.html',      label: 'Home' },
+  { href: 'about.html',      label: 'About' },
+  { href: 'services.html',   label: 'Services' },
+  { href: 'industries.html', label: 'Industries' },
+  { href: 'projects.html',   label: 'Projects' },
+  { href: 'technology.html', label: 'Technology' },
+  { href: 'contact.html',    label: 'Contact' },
+];
+
+function isActive(href) {
+  if (CURRENT === href) return true;
+  if (CURRENT === '' && href === 'index.html') return true;
+  // service pages: mark "Services" active
+  if (window.location.pathname.includes('/services/') && href === 'services.html') return true;
+  return false;
+}
+
+// ── Inject Navigation ─────────────────────────────────────────
+function injectNav() {
+  const linksHtml = NAV.map(l =>
+    `<a href="${BASE}${l.href}" class="nav-link ${isActive(l.href) ? 'active' : ''}">${l.label}</a>`
+  ).join('');
+
+  const mobileHtml = NAV.map(l =>
+    `<a href="${BASE}${l.href}" class="mobile-nav-link">${l.label}</a>`
+  ).join('');
+
+  const html = `
+    <nav class="site-nav" id="site-nav">
+      <div class="nav-inner">
+        <a href="${BASE}index.html" class="nav-logo">
+          <span class="nav-logo-name">AIRFREE GEOSPATIAL</span>
+          <span class="nav-logo-sub">Pty Ltd &mdash; Spatial Intelligence</span>
+        </a>
+        <div class="nav-links" id="nav-links">
+          ${linksHtml}
+          <a href="${BASE}contact.html#capability" class="nav-cta">Request Capability Statement</a>
+        </div>
+        <button class="nav-hamburger" id="nav-toggle" aria-label="Toggle menu">
+          <span class="ham-line"></span>
+          <span class="ham-line"></span>
+          <span class="ham-line"></span>
+        </button>
+      </div>
+      <div class="mobile-overlay" id="mobile-menu">
+        ${mobileHtml}
+        <a href="${BASE}contact.html#capability" class="btn btn-primary" style="margin-top:1rem;">Request Capability Statement</a>
+        <button id="mobile-close" style="position:absolute;top:1.5rem;right:2rem;background:none;border:none;cursor:pointer;color:var(--text-2);font-size:1.4rem;">&#10005;</button>
+      </div>
+    </nav>`;
+
+  document.body.insertAdjacentHTML('afterbegin', html);
+
+  const toggle = document.getElementById('nav-toggle');
+  const menu = document.getElementById('mobile-menu');
+  const close = document.getElementById('mobile-close');
+  toggle?.addEventListener('click', () => menu.classList.toggle('open'));
+  close?.addEventListener('click', () => menu.classList.remove('open'));
+
+  // scroll behaviour
+  window.addEventListener('scroll', () => {
+    const nav = document.getElementById('site-nav');
+    if (!nav) return;
+    nav.style.background = window.scrollY > 60
+      ? 'rgba(3,8,16,0.99)'
+      : 'rgba(7,12,24,0.96)';
+  }, { passive: true });
+}
+
+// ── Inject Footer ─────────────────────────────────────────────
+function injectFooter() {
+  const year = new Date().getFullYear();
+  const svcLinks = [
+    ['GIS &amp; Spatial Infrastructure',    'gis-spatial.html'],
+    ['Digital Mapping &amp; Web GIS',       'digital-mapping.html'],
+    ['Drone &amp; Photogrammetry',          'drone-photogrammetry.html'],
+    ['Remote Sensing &amp; AI Analytics',   'remote-sensing.html'],
+    ['Infrastructure &amp; Utilities',      'infrastructure-utility.html'],
+    ['Survey Data &amp; QA/QC',            'survey-data.html'],
+    ['Environmental Intelligence',          'environmental.html'],
+  ].map(([label, file]) =>
+    `<li><a href="${BASE}services/${file}" class="footer-link">${label}</a></li>`
+  ).join('');
+
+  const html = `
+    <footer class="site-footer" style="padding:4.5rem 0 2rem;">
+      <div class="container">
+        <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1.4fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid var(--border-s);">
+
+          <!-- Brand -->
+          <div>
+            <div style="font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:600;color:white;margin-bottom:0.4rem;">AIRFREE GEOSPATIAL PTY LTD</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:0.54rem;letter-spacing:0.22em;color:var(--accent-b);text-transform:uppercase;margin-bottom:1.25rem;">Enterprise Spatial Intelligence</div>
+            <p style="font-size:0.84rem;color:var(--text-2);max-width:300px;line-height:1.7;">A specialised geospatial intelligence and infrastructure analytics consultancy serving government, utilities, and large-scale engineering operations.</p>
+          </div>
+
+          <!-- Services -->
+          <div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-3);margin-bottom:1.25rem;">Services</div>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:0.7rem;">${svcLinks}</ul>
+          </div>
+
+          <!-- Company -->
+          <div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-3);margin-bottom:1.25rem;">Company</div>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:0.7rem;">
+              ${['About','Industries','Projects','Technology','Contact'].map((l,_,a,href=l.toLowerCase()+'.html') =>
+                `<li><a href="${BASE}${l==='About'?'about':l==='Industries'?'industries':l==='Projects'?'projects':l==='Technology'?'technology':'contact'}.html" class="footer-link">${l}</a></li>`
+              ).join('')}
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-3);margin-bottom:1.25rem;">Contact</div>
+            <div style="display:flex;flex-direction:column;gap:1rem;">
+              <div>
+                <div style="font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-3);margin-bottom:0.25rem;">Email</div>
+                <span style="font-size:0.83rem;color:var(--text-2);">info@airfreegeospatial.com.au</span>
+              </div>
+              <div>
+                <div style="font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-3);margin-bottom:0.25rem;">Jurisdiction</div>
+                <span style="font-size:0.83rem;color:var(--text-2);">Australia (ABN Registered)</span>
+              </div>
+              <a href="${BASE}contact.html#capability" class="btn btn-primary" style="font-size:0.68rem;padding:0.7rem 1.2rem;margin-top:0.5rem;">Request Capability Statement</a>
+            </div>
+          </div>
+
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding-top:1.5rem;flex-wrap:wrap;gap:1rem;">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:0.62rem;color:var(--text-3);letter-spacing:0.08em;">
+            &copy; ${year} Airfree Geospatial Pty Ltd. All rights reserved.
+          </div>
+          <div style="display:flex;gap:2rem;">
+            <a href="#" class="footer-link" style="font-size:0.7rem;">Privacy Policy</a>
+            <a href="#" class="footer-link" style="font-size:0.7rem;">Terms of Service</a>
+            <span style="font-size:0.7rem;color:var(--text-3);">ABN Registered &mdash; Australia</span>
+          </div>
+        </div>
+      </div>
+    </footer>`;
+
+  document.body.insertAdjacentHTML('beforeend', html);
+}
+
+// ── Hero Carousel ─────────────────────────────────────────────
+function initCarousel() {
+  const slides = document.querySelectorAll('.hero-slide');
+  if (!slides.length) return;
+  let cur = 0;
+  slides[0].classList.add('active');
+  setInterval(() => {
+    slides[cur].classList.remove('active');
+    cur = (cur + 1) % slides.length;
+    slides[cur].classList.add('active');
+  }, 6500);
+}
+
+// ── Scroll Reveal ─────────────────────────────────────────────
+function initReveal() {
+  const els = document.querySelectorAll('.reveal');
+  if (!els.length) return;
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        obs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  els.forEach(el => obs.observe(el));
+}
+
+// ── Init ──────────────────────────────────────────────────────
+document.addEventListener('DOMContentLoaded', () => {
+  injectNav();
+  injectFooter();
+  initCarousel();
+  initReveal();
+});

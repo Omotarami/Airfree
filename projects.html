@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects & Capabilities — Airfree Geospatial Pty Ltd</title>
+  <meta name="description" content="Capability demonstrations, spatial intelligence workflows, and infrastructure mapping examples from Airfree Geospatial Pty Ltd." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>tailwind.config={theme:{extend:{fontFamily:{serif:['Playfair Display','Georgia','serif'],sans:['Inter','system-ui','sans-serif'],mono:['IBM Plex Mono','monospace']}}}}</script>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .proj-overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to top, rgba(3,8,16,0.88) 0%, rgba(3,8,16,0.4) 55%, rgba(3,8,16,0.18) 100%);
+      display: flex; align-items: flex-end; padding: 1rem 1.25rem;
+    }
+    .proj-label {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.62rem; letter-spacing: 0.18em;
+      text-transform: uppercase; color: var(--accent-bl);
+    }
+    .card-title { font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 600; margin-bottom: 0.65rem; color: var(--text-1); line-height: 1.3; }
+    .card-body { font-size: 0.92rem; color: var(--text-2); line-height: 1.8; }
+    .card-cat { font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent-b); margin-bottom: 0.65rem; }
+  </style>
+</head>
+<body>
+
+<nav id="site-nav"></nav>
+
+<section class="page-hero">
+  <div class="page-hero-grid"></div>
+  <div class="container" style="position:relative;z-index:2;">
+    <div class="coord" style="margin-bottom:1.25rem;">CAPABILITY REGISTER &nbsp;|&nbsp; AIRFREE GEOSPATIAL PTY LTD &nbsp;|&nbsp; SPATIAL INTELLIGENCE DIVISION</div>
+    <div class="label reveal" style="margin-bottom:1rem;">Projects &amp; Capabilities</div>
+    <h1 class="reveal d1" style="font-size:clamp(2rem,4vw,3.2rem);margin-bottom:1rem;">Capability Demonstrations &amp; Spatial Workflows</h1>
+    <p class="reveal d2" style="font-size:1rem;color:var(--text-2);max-width:640px;line-height:1.8;">A structured register of technical capability areas, system simulations, and spatial intelligence workflows demonstrating the scope and depth of Airfree Geospatial's enterprise service delivery.</p>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="section-sm" style="background:var(--bg-darkest);border-bottom:1px solid var(--border-s);">
+  <div class="container">
+    <div class="blockquote reveal" style="max-width:780px;font-size:1rem;">
+      This register presents Airfree Geospatial's capability across seven service domains through documented workflows, methodological frameworks, and system architecture examples. All capability demonstrations reflect validated geospatial methodologies and production-grade technical approaches applicable to live government and enterprise engagements.
+    </div>
+  </div>
+</section>
+
+<!-- DOMAIN 01 — GIS Infrastructure -->
+<section class="section" style="background:var(--bg-primary);">
+  <div class="container">
+    <div class="label reveal" style="margin-bottom:1.5rem;">Capability Domain 01 — GIS Infrastructure</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-bottom:4rem;">
+
+      <!-- Card 1 -->
+      <div class="project-card reveal">
+        <div class="project-visual" style="background-image:url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=700&q=80&fit=crop&auto=format');">
+          <div class="proj-overlay"><span class="proj-label">SDI Architecture</span></div>
+        </div>
+        <div style="padding:1.5rem;">
+          <div class="card-cat">Workflow Simulation</div>
+          <h3 class="card-title">Enterprise SDI Deployment Architecture</h3>
+          <p class="card-body">Multi-tier spatial data infrastructure design — PostGIS spatial database backend, GeoServer OGC service layer, enterprise portal frontend, and metadata catalogue integration. Architected to Australian Government SDI standards.</p>
+          <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:0.4rem;"><span class="tech-tag">PostGIS</span><span class="tech-tag">GeoServer</span><span class="tech-tag">ISO 19115</span></div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="project-card reveal d1">
+        <div class="project-visual" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=700&q=80&fit=crop&auto=format');">
+          <div class="proj-overlay"><span class="proj-label">Spatial DB Schema</span></div>
+        </div>
+        <div style="padding:1.5rem;">
+          <div class="card-cat">Workflow Simulation</div>
+          <h3 class="card-title">Spatial Database Schema Design — Asset Registry</h3>
+          <p class="card-body">Enterprise asset registry schema using GDA2020 (EPSG:7844) coordinate reference system. Feature class design, topology rules, domain constraints, and relationship class architecture for government asset management.</p>
+          <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:0.4rem;"><span class="tech-tag">PostgreSQL</span><span class="tech-tag">GDA2020</span><span class="tech-tag">Topology</span></div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="project-card reveal d2">
+        <div class="project-visual" style="background-image:url('https://images.unsplash.com/photo-1524661135-423995f22d0b?w=700&q=80&fit=crop&auto=format');">
+          <div class="proj-overlay"><span class="proj-label">Cadastral Integration</span></div>
+        </div>
+        <div style="padding:1.5rem;">
+          <div class="card-cat">Workflow Simulation</div>
+          <h3 class="card-title">Cadastral &amp; Topographic Data Integration</h3>
+          <p class="card-body">Integration of state cadastral data, topographic base layers, and client asset data into a unified GIS environment. Coordinate reference system harmonisation, schema alignment, and quality validation workflow.</p>
+          <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:0.4rem;"><span class="tech-tag">GDAL</span><span class="tech-tag">FME</span><span class="tech-tag">Cadastral</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- DOMAIN 02 — UAV & Photogrammetry -->
+    <div class="label reveal" style="margin-bottom:1.5rem;">Capability Domain 02 — UAV &amp; Photogrammetry</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-bottom:4rem;">
+
+      <!-- Card 4 -->
+      <div class="project-card reveal">
+        <div class="project-visual" style="background-image:url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=700&q=80&fit=crop&auto=format');">
+          <div class="proj-overlay"><span class="proj-label">Point Cloud Survey — ±15mm RMSE</span></div>
+        </div>
+        <div style="padding:1.5rem;">
+          <div class="card-cat">Workflow Simulation</div>
+          <h3 class="card-title">Bridge &amp; Structure Point Cloud Survey</h3>
+          <p class="card-body">UAV-based close-range photogrammetric capture of bridge and built structure. Dense point cloud generation at 15mm RMSE accuracy, 3D mesh modelling, and structural deviation analysis against design model.</p>
+          <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:0.4rem;"><span class="tech-tag">Metashape</span><span class="tech-tag">CloudCompare</span><span class="tech-tag">GCP</span></div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="project-card reveal d1">
+        <div class="project-visual" style="background-image:url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=700&q=80&fit=crop&auto=format');">
+          <div class="proj-overlay"><span class="proj-label">Orthomosaic — 2.1cm GSD — 48.2ha</span></div>
+        </div>
+        <div style="padding:1.5rem;">
+          <div class="card-cat">Workflow Simulation</div>
+          <h3 class="card-title">High-Resolution Site Orthomosaic — 2cm GSD</h3>
+          <p class="card-body">48-hectare construction site orthomosaic at 2.1cm ground sample distance. Flight planning, GCP establishment, photogrammetric processing, and georectified output in GDA2020 for engineering and construction use.</p>
+          <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:0.4rem;"><span class="tech-tag">Pix4D</span><span class="tech-tag">GDA2020</span><span class="tech-tag">GCP</span></div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="project-card reveal d2">
+        <div class="project-visual" style="background-image:url('https://images.unsplash.com/photo-1590736704728-f4730bb30770?w=700&q=80&fit=crop&auto=format');">
+          <div class="proj-overlay"><span class="proj-label">Volumetric Analysis — Cut &amp; Fill</span></div>
+        </div>
+        <div style="padding:1.5rem;">
+          <div class="card-cat">Workflow Simulation</div>
+          <h3 class="card-title">Earthworks Volumetric Reporting — Cut &amp; Fill</h3>
+          <p class="card-body">Periodic UAV surveys over a road construction site producing cut and fill volume calculations from DSM differencing. Monthly reporting cycle with volumetric accuracy within 2% of machine-measured quantities.</p>
+          <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:0.4rem;"><span class="tech-tag">DSM Differencing</span><span class="tech-tag">Metashape</span><span class="tech-tag">QGIS</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- DOMAIN 03 — Remote Sensing & AI -->
+    <div class="label reveal" style="margin-bottom:1.5rem;">Capability Domain 03 — Remote Sensing &amp; AI</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-bottom:4rem;">
+
+      <!-- Card 7 — split layout -->
+      <div class="project-card reveal" style="display:grid;grid-template-columns:1fr 1fr;">
+        <div class="project-visual" style="height:auto;min-height:200px;background-image:url('https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600&q=80&fit=crop&auto=format');">
+          <div class="proj-overlay"><span class="proj-label">Sentinel-2 NDVI</span></div>
+        </div>
+        <div style="padding:1.5rem;">
+          <div class="card-cat">Capability</div>
+          <h3 class="card-title">Vegetation Index Time-Series — Sentinel-2</h3>
+          <p class="card-body">Annual NDVI, EVI, and NBR time-series analysis over a 220,000ha pastoral property using Sentinel-2 multispectral imagery. Seasonal trend extraction and drought severity mapping.</p>
+          <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:0.4rem;"><span class="tech-tag">Sentinel-2</span><span class="tech-tag">Python</span><span class="tech-tag">GEE</span></div>
+        </div>
+      </div>
+
+      <!-- Card 8 — split layout -->
+      <div class="project-card reveal d1" style="display:grid;grid-template-columns:1fr 1fr;">
+        <div class="project-visual" style="height:auto;min-height:200px;background-image:url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=600&q=80&fit=crop&auto=format');">
+          <div class="proj-overlay"><span class="proj-label">LULC — 91.4% OA</span></div>
+        </div>
+        <div style="padding:1.5rem;">
+          <div class="card-cat">Capability</div>
+          <h3 class="card-title">Land Use / Land Cover Classification — ML Pipeline</h3>
+          <p class="card-body">Random Forest classification of Sentinel-2 multispectral imagery producing a 5-class LULC map at 10m resolution. 91.4% overall accuracy validated against reference sites.</p>
+          <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:0.4rem;"><span class="tech-tag">scikit-learn</span><span class="tech-tag">Sentinel-2</span><span class="tech-tag">Random Forest</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- DOMAIN 04 — Environmental & Carbon -->
+    <div class="label reveal" style="margin-bottom:1.5rem;">Capability Domain 04 — Environmental &amp; Carbon</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;">
+
+      <!-- Card 9 — spans 2 cols, split layout -->
+      <div class="project-card reveal" style="grid-column:span 2;display:grid;grid-template-columns:1fr 1fr;">
+        <div class="project-visual" style="height:auto;min-height:220px;background-image:url('https://images.unsplash.com/photo-1448375240586-882707db888b?w=700&q=80&fit=crop&auto=format');">
+          <div class="proj-overlay"><span class="proj-label">Carbon Stock — 8,400ha Woodland</span></div>
+        </div>
+        <div style="padding:1.75rem;">
+          <div class="card-cat">Capability</div>
+          <h3 class="card-title">Carbon Stock Estimation — Woodland Ecosystem</h3>
+          <p class="card-body" style="margin-bottom:1rem;">Spatial carbon accounting for an 8,400-hectare grassy woodland ecosystem using allometric biomass models, satellite-derived canopy cover, and field calibration data. Delivers above and below-ground carbon stock estimates with uncertainty quantification at ±8.4% confidence.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.4rem;"><span class="tech-tag">AGB Models</span><span class="tech-tag">Sentinel-2</span><span class="tech-tag">Python</span><span class="tech-tag">QGIS</span></div>
+        </div>
+      </div>
+
+      <!-- Card 10 -->
+      <div class="project-card reveal d1">
+        <div class="project-visual" style="background-image:url('https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=700&q=80&fit=crop&auto=format');">
+          <div class="proj-overlay"><span class="proj-label">Habitat Condition Assessment</span></div>
+        </div>
+        <div style="padding:1.5rem;">
+          <div class="card-cat">Capability</div>
+          <h3 class="card-title">Threatened Species Habitat Mapping</h3>
+          <p class="card-body">Remote sensing and GIS-based habitat condition assessment for EPBC-listed threatened species. Canopy classification, connectivity analysis, and habitat quality scoring for regulatory biodiversity offsets.</p>
+          <div style="margin-top:1rem;display:flex;flex-wrap:wrap;gap:0.4rem;"><span class="tech-tag">EPBC</span><span class="tech-tag">NDVI</span><span class="tech-tag">GIS</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background:var(--bg-card);border-top:1px solid var(--border-s);padding:4rem 0;">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:1fr auto;gap:3rem;align-items:center;">
+      <div class="reveal">
+        <h2 style="font-size:clamp(1.5rem,2.2vw,2rem);margin-bottom:0.75rem;">Discuss a Specific Capability Requirement</h2>
+        <p style="font-size:0.95rem;color:var(--text-2);max-width:540px;line-height:1.8;">If your organisation has a specific geospatial challenge, data requirement, or spatial systems need — contact us to discuss how our demonstrated capabilities apply to your operational context.</p>
+      </div>
+      <div class="reveal d2" style="display:flex;flex-direction:column;gap:1rem;align-items:flex-end;">
+        <a href="contact.html#capability" class="btn btn-gold">Request Capability Statement</a>
+        <a href="services.html" class="btn btn-ghost">View Service Portfolio</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="site-footer"></footer>
+<script src="js/main.js"></script>
+</body>
+</html>
