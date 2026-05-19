@@ -299,6 +299,41 @@ async function initCoordinates() {
     },
   );
 }
+
+function initContactMap() {
+  const map = L.map("contact-map").setView([-25.2744, 133.7751], 4); 
+  // center of Australia
+
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    attribution: "&copy; OpenStreetMap contributors",
+  }).addTo(map);
+
+  const locations = [
+    {
+      name: "Munno Para West, SA",
+      coords: [-34.6656, 138.7063],
+    },
+    {
+      name: "Thomastown, VIC",
+      coords: [-37.6806, 145.0155],
+    },
+    {
+      name: "Canning Vale, WA",
+      coords: [-32.0576, 115.9181],
+    },
+  ];
+
+  const bounds = [];
+
+  locations.forEach((loc) => {
+    const marker = L.marker(loc.coords).addTo(map);
+    marker.bindPopup(`<b>${loc.name}</b>`);
+    bounds.push(loc.coords);
+  });
+
+  map.fitBounds(bounds, { padding: [50, 50] });
+}
+
 // ── Init ──────────────────────────────────────────────────────
 document.addEventListener("DOMContentLoaded", () => {
   injectNav();
@@ -306,4 +341,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initCarousel();
   initReveal();
   initCoordinates();
+  initContactMap();
 });
