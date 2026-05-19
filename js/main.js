@@ -39,11 +39,11 @@ function injectNav() {
     `<a href="${BASE}${l.href}" class="mobile-nav-link">${l.label}</a>`
   ).join('');
 
-  const html = `
+  const navHtml = `
     <nav class="site-nav" id="site-nav">
       <div class="nav-inner">
         <a href="${BASE}index.html" class="nav-logo">
-        <img src="${BASE}images/Airfree_logo.png" alt="airfree_logo" class="nav-img"> 
+        <img src="${BASE}images/Airfree_logo.png" alt="airfree_logo" class="nav-img">
         </a>
         <div class="nav-links" id="nav-links">
           ${linksHtml}
@@ -55,14 +55,17 @@ function injectNav() {
           <span class="ham-line"></span>
         </button>
       </div>
-      <div class="mobile-overlay" id="mobile-menu">
-        ${mobileHtml}
-        <a href="${BASE}contact.html#capability" class="btn btn-primary" style="margin-top:1rem;">Request Capability Statement</a>
-        <button id="mobile-close" style="position:absolute;top:1.5rem;right:2rem;background:none;border:none;cursor:pointer;color:var(--text-2);font-size:1.4rem;">&#10005;</button>
-      </div>
     </nav>`;
 
-  document.body.insertAdjacentHTML('afterbegin', html);
+  const overlayHtml = `
+    <div class="mobile-overlay" id="mobile-menu">
+      ${mobileHtml}
+      <a href="${BASE}contact.html#capability" class="btn btn-primary" style="margin-top:1rem;">Request Capability Statement</a>
+      <button id="mobile-close" style="position:absolute;top:1.5rem;right:2rem;background:none;border:none;cursor:pointer;color:var(--text-2);font-size:1.4rem;">&#10005;</button>
+    </div>`;
+
+  document.body.insertAdjacentHTML('afterbegin', navHtml);
+  document.getElementById('site-nav').insertAdjacentHTML('afterend', overlayHtml);
 
   const toggle = document.getElementById('nav-toggle');
   const menu = document.getElementById('mobile-menu');
@@ -98,7 +101,7 @@ function injectFooter() {
   const html = `
     <footer class="site-footer" style="padding:4.5rem 0 2rem;">
       <div class="container">
-        <div style="display:grid;grid-template-columns:2fr 1fr 1fr 1.4fr;gap:3rem;padding-bottom:3rem;border-bottom:1px solid var(--border-s);">
+        <div class="footer-inner-grid">
 
           <!-- Brand -->
           <div>
@@ -140,7 +143,7 @@ function injectFooter() {
           </div>
 
         </div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding-top:1.5rem;flex-wrap:wrap;gap:1rem;">
+        <div class="footer-bottom" style="display:flex;justify-content:space-between;align-items:center;padding-top:1.5rem;flex-wrap:wrap;gap:1rem;">
           <div style="font-family:'IBM Plex Mono',monospace;font-size:0.62rem;color:var(--text-3);letter-spacing:0.08em;">
             &copy; ${year} Airfree Geospatial Pty Ltd. All rights reserved.
           </div>
