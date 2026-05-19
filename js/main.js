@@ -12,28 +12,25 @@ const CURRENT = window.location.pathname.split("/").pop() || "index.html";
 
 // ── Navigation links ──────────────────────────────────────────
 const NAV = [
-  { href: "index.html", label: "Home" },
-  { href: "about.html", label: "About" },
+  {href: "index.html", label: "Home"},
+  {href: "about.html", label: "About"},
 
   {
     href: "services.html",
     label: "Services",
-    children: [
-      { href: "technology.html", label: "Technology" },
-      
-    ],
+    children: [{href: "technology.html", label: "Technology"}],
   },
 
   {
     href: "industries.html",
     label: "Industries",
     children: [
-      { href: "industries.html#gov", label: "Government" },
-      { href: "industries.html#utilities", label: "Utilities" },
+      {href: "industries.html#gov", label: "Government"},
+      {href: "industries.html#utilities", label: "Utilities"},
     ],
   },
 
-  { href: "contact.html", label: "Contact" },
+  {href: "contact.html", label: "Contact"},
 ];
 
 function isActive(href) {
@@ -50,9 +47,9 @@ function isActive(href) {
 
 // ── Inject Navigation ─────────────────────────────────────────
 function injectNav() {
- const linksHtml = NAV.map((l) => {
-  if (l.children && l.children.length) {
-    return `
+  const linksHtml = NAV.map((l) => {
+    if (l.children && l.children.length) {
+      return `
       <div class="nav-dropdown">
         <a href="${BASE}${l.href}" class="nav-link ${isActive(l.href) ? "active" : ""}">
           ${l.label}
@@ -62,22 +59,22 @@ function injectNav() {
           ${l.children
             .map(
               (c) =>
-                `<a href="${BASE}${c.href}" class="dropdown-link">${c.label}</a>`
+                `<a href="${BASE}${c.href}" class="dropdown-link">${c.label}</a>`,
             )
             .join("")}
         </div>
       </div>
     `;
-  }
+    }
 
-  return `
+    return `
     <a href="${BASE}${l.href}" class="nav-link ${isActive(l.href) ? "active" : ""}">
       ${l.label}
     </a>
   `;
-}).join("");
+  }).join("");
 
-   const mobileHtml = NAV.map(
+  const mobileHtml = NAV.map(
     (l) => `<a href="${BASE}${l.href}" class="mobile-nav-link">${l.label}</a>`,
   ).join("");
 
@@ -123,8 +120,12 @@ function injectNav() {
     () => {
       const nav = document.getElementById("site-nav");
       if (!nav) return;
-      nav.style.background =
-        window.scrollY > 60 ? "rgba(255,255,255,0.98)" : "white";
+
+      if (window.scrollY > 60) {
+        nav.classList.add("scrolled");
+      } else {
+        nav.classList.remove("scrolled");
+      }
     },
     {passive: true},
   );
@@ -253,7 +254,6 @@ function initReveal() {
 // ── Dynamic Coordinates + Location ─────────────────────────
 async function initCoordinates() {
   const coordElement = document.getElementById("coordinates");
-
   if (!coordElement) return;
 
   if (!navigator.geolocation) {
@@ -266,52 +266,42 @@ async function initCoordinates() {
       const lat = position.coords.latitude;
       const lon = position.coords.longitude;
 
-      const latDirection = lat >= 0 ? "N" : "S";
-      const lonDirection = lon >= 0 ? "E" : "W";
+      const latDir = lat >= 0 ? "N" : "S";
+      const lonDir = lon >= 0 ? "E" : "W";
 
       const formattedLat = Math.abs(lat).toFixed(4);
       const formattedLon = Math.abs(lon).toFixed(4);
 
+      let locationText = "Unknown location";
+
       try {
-        // Reverse geocoding
-        const response = await fetch(
-          `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`,
+        const res = await fetch(
+          `https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lon}`
         );
 
-        const data = await response.json();
+        const data = await res.json();
 
-        const country = data.address.country_code?.toUpperCase() || "XX";
-
-        const state = data.address.state || data.address.region || "";
-
-        const city =
-          data.address.city ||
-          data.address.town ||
-          data.address.village ||
-          data.address.county ||
+        const country = data.address?.country || "Unknown Country";
+        const state =
+          data.address?.state ||
+          data.address?.region ||
+          data.address?.county ||
           "";
 
-        // Create short city code
-        const cityCode = city.replace(/\s+/g, "").substring(0, 3).toUpperCase();
+        locationText = `${country}${state ? " / " + state : ""}`;
 
-        coordElement.innerHTML = `
-          ${formattedLat}&deg; ${latDirection}
-          &nbsp;
-          ${formattedLon}&deg; ${lonDirection}
-          &nbsp;/&nbsp;
-          ${country}-${cityCode}
-        `;
-      } catch (error) {
-        coordElement.innerHTML = `
-          ${formattedLat}&deg; ${latDirection}
-          &nbsp;
-          ${formattedLon}&deg; ${lonDirection}
-        `;
+      } catch (e) {
+        locationText = "Location unavailable";
       }
+
+      coordElement.innerHTML = `
+        ${formattedLat}° ${latDir}, ${formattedLon}° ${lonDir}<br>
+        ${locationText}
+      `;
     },
     () => {
       coordElement.innerHTML = "Location unavailable";
-    },
+    }
   );
 }
 // ── Init ──────────────────────────────────────────────────────
