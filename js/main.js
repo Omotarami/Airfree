@@ -77,26 +77,9 @@ function injectNav() {
   `;
 }).join("");
 
-  const mobileHtml = NAV.map((l) => {
-  if (l.children && l.children.length) {
-    return `
-      <div class="mobile-nav-group">
-        <a href="${BASE}${l.href}" class="mobile-nav-link">${l.label}</a>
-
-        <div class="mobile-submenu">
-          ${l.children
-            .map(
-              (c) =>
-                `<a href="${BASE}${c.href}" class="mobile-sub-link">${c.label}</a>`
-            )
-            .join("")}
-        </div>
-      </div>
-    `;
-  }
-
-  return `<a href="${BASE}${l.href}" class="mobile-nav-link">${l.label}</a>`;
-}).join("");
+   const mobileHtml = NAV.map(
+    (l) => `<a href="${BASE}${l.href}" class="mobile-nav-link">${l.label}</a>`,
+  ).join("");
 
   const navHtml = `
     <nav class="site-nav" id="site-nav">
