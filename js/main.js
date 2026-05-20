@@ -123,8 +123,15 @@ function injectNav() {
   const toggle = document.getElementById("nav-toggle");
   const menu = document.getElementById("mobile-menu");
   const close = document.getElementById("mobile-close");
-  toggle?.addEventListener("click", () => menu.classList.toggle("open"));
-  close?.addEventListener("click", () => menu.classList.remove("open"));
+  toggle?.addEventListener("click", () => {
+    const opening = !menu.classList.contains("open");
+    menu.classList.toggle("open");
+    toggle.classList.toggle("active", opening);
+  });
+  close?.addEventListener("click", () => {
+    menu.classList.remove("open");
+    toggle?.classList.remove("active");
+  });
 
   // mobile accordion
   document.querySelectorAll(".mobile-has-children").forEach((btn) => {
