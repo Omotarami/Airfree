@@ -17,6 +17,7 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -67,6 +68,7 @@
       <div class="hero-overlay grid-tex"></div>
 
       <div
+        id="coord-brand"
         style="position: absolute; top: 5.5rem; left: 2rem; z-index: 2"
         class="coord"
       >
@@ -256,6 +258,33 @@
         </div>
       </div>
     </section>
+
+    <!-- ════════════════════════════════════════════════
+     PHOTO STRIP
+════════════════════════════════════════════════ -->
+    <div class="photo-strip" style="display:grid;grid-template-columns:1fr 1fr 1fr;height:300px;">
+      <div class="reveal" style="background-image:url('https://images.unsplash.com/photo-1579829366248-204fe8413f31?auto=format&fit=crop&w=700&q=80');background-size:cover;background-position:center;position:relative;overflow:hidden;">
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,8,16,0.1) 0%,rgba(3,8,16,0.72) 100%);"></div>
+        <div style="position:absolute;bottom:1.25rem;left:1.5rem;">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:0.52rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:0.3rem;">01</div>
+          <div style="font-family:'Playfair Display',serif;font-size:0.95rem;color:white;">Drone &amp; Photogrammetry</div>
+        </div>
+      </div>
+      <div class="reveal d1" style="background-image:url('https://images.unsplash.com/photo-1569396116180-210c182bedb8?auto=format&fit=crop&w=700&q=80');background-size:cover;background-position:center;position:relative;overflow:hidden;">
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,8,16,0.1) 0%,rgba(3,8,16,0.72) 100%);"></div>
+        <div style="position:absolute;bottom:1.25rem;left:1.5rem;">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:0.52rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:0.3rem;">02</div>
+          <div style="font-family:'Playfair Display',serif;font-size:0.95rem;color:white;">Remote Sensing &amp; AI</div>
+        </div>
+      </div>
+      <div class="reveal d2" style="background-image:url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=700&q=80');background-size:cover;background-position:center;position:relative;overflow:hidden;">
+        <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,8,16,0.1) 0%,rgba(3,8,16,0.72) 100%);"></div>
+        <div style="position:absolute;bottom:1.25rem;left:1.5rem;">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:0.52rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:0.3rem;">03</div>
+          <div style="font-family:'Playfair Display',serif;font-size:0.95rem;color:white;">Spatial Infrastructure</div>
+        </div>
+      </div>
+    </div>
 
     <!-- ════════════════════════════════════════════════
      SERVICE PILLARS
@@ -598,6 +627,33 @@
     </section>
 
     <!-- ════════════════════════════════════════════════
+     VISUAL BREAK
+════════════════════════════════════════════════ -->
+    <div style="height:340px;background-image:url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1800&q=80');background-size:cover;background-position:center;position:relative;overflow:hidden;">
+      <div style="position:absolute;inset:0;background:rgba(3,8,16,0.6);"></div>
+      <div class="container" style="position:relative;z-index:1;height:100%;display:flex;align-items:center;gap:6rem;flex-wrap:wrap;">
+        <div style="border-left:3px solid var(--accent-b);padding:1rem 2rem;">
+          <p style="font-family:'Playfair Display',serif;font-size:clamp(1rem,2vw,1.3rem);color:white;font-style:italic;line-height:1.6;max-width:560px;">"Spatial precision is the foundation of every infrastructure decision — from planning to compliance to operational management."</p>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:0.54rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent-b);margin-top:0.85rem;">Airfree Geospatial &mdash; Enterprise Practice</div>
+        </div>
+        <div style="display:flex;gap:3rem;flex-wrap:wrap;">
+          <div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:2rem;font-weight:300;color:white;line-height:1;">7</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:0.58rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-3);margin-top:0.4rem;">Service Domains</div>
+          </div>
+          <div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:2rem;font-weight:300;color:white;line-height:1;">3</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:0.58rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-3);margin-top:0.4rem;">Office Locations</div>
+          </div>
+          <div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:2rem;font-weight:300;color:white;line-height:1;">AU</div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:0.58rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--text-3);margin-top:0.4rem;">ABN Registered</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════
      INDUSTRIES SERVED
 ════════════════════════════════════════════════ -->
     <section class="section grid-tex" style="background: var(--bg-secondary)">
@@ -632,6 +688,10 @@
             <a href="industries.html" class="btn btn-ghost reveal d3"
               >View All Industries</a
             >
+            <div class="reveal d4" style="margin-top:1.75rem;height:220px;background-image:url('https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=700&q=80');background-size:cover;background-position:center;position:relative;overflow:hidden;">
+              <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,8,16,0.05) 0%,rgba(3,8,16,0.7) 100%);"></div>
+              <div style="position:absolute;bottom:1rem;left:1.25rem;font-family:'IBM Plex Mono',monospace;font-size:0.5rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.5);">Government &amp; Infrastructure Sectors</div>
+            </div>
           </div>
           <div class="grid-1-1" style="gap: 1rem">
             <div class="ind-card reveal">
@@ -884,6 +944,10 @@
             <a href="technology.html" class="btn btn-ghost reveal d3"
               >Full Technology Stack</a
             >
+            <div class="reveal d4" style="margin-top:1.75rem;height:220px;background-image:url('https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?auto=format&fit=crop&w=700&q=80');background-size:cover;background-position:center;position:relative;overflow:hidden;">
+              <div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(3,8,16,0.05) 0%,rgba(3,8,16,0.7) 100%);"></div>
+              <div style="position:absolute;bottom:1rem;left:1.25rem;font-family:'IBM Plex Mono',monospace;font-size:0.5rem;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.5);">Enterprise Spatial Platforms</div>
+            </div>
           </div>
           <div class="grid-1-1" style="gap: 1rem">
             <div class="card reveal" style="padding: 1.5rem">
@@ -972,6 +1036,19 @@
     </section>
 
     <!-- ════════════════════════════════════════════════
+     VISUAL BREAK 2
+════════════════════════════════════════════════ -->
+    <div style="height:280px;background-image:url('https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?auto=format&fit=crop&w=1800&q=80');background-size:cover;background-position:center top;position:relative;overflow:hidden;">
+      <div style="position:absolute;inset:0;background:rgba(3,8,16,0.58);"></div>
+      <div class="container" style="position:relative;z-index:1;height:100%;display:flex;align-items:center;">
+        <div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:0.56rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--accent-b);margin-bottom:0.85rem;">Enterprise Capability</div>
+          <h3 style="font-family:'Playfair Display',serif;font-size:clamp(1.3rem,2.5vw,2rem);color:white;font-weight:600;max-width:640px;line-height:1.3;">Trusted by Government &amp; Critical Infrastructure Operators Across Australia</h3>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════
      WHY AIRFREE
 ════════════════════════════════════════════════ -->
     <section class="section grid-tex" style="background: var(--bg-darkest)">
@@ -1035,7 +1112,7 @@
                     font-family: &quot;Playfair Display&quot;, serif;
                   "
                 >
-                  PhD-Level Technical Depth
+                  Advanced Technical Depth
                 </h4>
                 <p
                   style="
@@ -1044,10 +1121,9 @@
                     line-height: 1.72;
                   "
                 >
-                  Advanced academic and practitioner expertise in spatial
-                  science, remote sensing, and geospatial engineering — applied
-                  directly to client delivery, not abstracted through generalist
-                  management layers.
+                  Practitioner expertise in spatial science, remote sensing, and
+                  geospatial engineering — applied directly to client delivery,
+                  not abstracted through generalist management layers.
                 </p>
               </div>
             </div>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products — Airfree Geospatial Pty Ltd</title>
+  <meta name="description" content="Airfree Geospatial product suite: Web GIS, Airfree Map navigation platform, API subscriptions, Enterprise GIS licensing, GIS/geospatial hosting, and Fleet subscriptions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+  <style>
+    .feat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 0.75rem;
+    }
+    .feat-card {
+      background: var(--bg-elevated);
+      border: 1px solid var(--border-s);
+      padding: 1rem 1.1rem;
+      transition: border-color 0.22s, background 0.22s;
+    }
+    .feat-card:hover { border-color: var(--accent-b); background: var(--bg-card); }
+    .feat-card-title {
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--text-1);
+      margin-bottom: 0.3rem;
+      letter-spacing: 0.02em;
+    }
+    .feat-card-desc {
+      font-size: 0.73rem;
+      color: var(--text-3);
+      line-height: 1.55;
+    }
+    .product-badge {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.57rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: white;
+      background: var(--accent-g);
+      padding: 0.22rem 0.7rem;
+      vertical-align: middle;
+    }
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    @media (max-width: 1023px) {
+      .products-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 599px) {
+      .products-grid { grid-template-columns: 1fr; }
+      .feat-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 399px) {
+      .feat-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-grid"></div>
+  <div class="container" style="position:relative;z-index:2;">
+    <div class="coord" style="margin-bottom:1.25rem;">PRODUCT SUITE &nbsp;|&nbsp; AIRFREE GEOSPATIAL PTY LTD &nbsp;|&nbsp; SPATIAL TECHNOLOGY DIVISION</div>
+    <div class="label reveal" style="margin-bottom:1rem;">Product Suite</div>
+    <h1 class="reveal d1" style="font-size:clamp(2rem,4vw,3.2rem);margin-bottom:1rem;">Spatial Technology Products</h1>
+    <p class="reveal d2" style="font-size:0.9rem;color:var(--text-2);max-width:640px;line-height:1.8;">Purpose-built geospatial products for enterprise navigation, fleet intelligence, API integration, and hosted spatial infrastructure. Designed for government, logistics, and enterprise deployments across Australia.</p>
+  </div>
+</section>
+
+<!-- FLAGSHIP — AIRFREE MAP -->
+<section class="section" style="background:var(--bg-secondary);">
+  <div class="container">
+    <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent-b);margin-bottom:2.5rem;">Flagship Product</div>
+    <div class="prod-featured reveal">
+      <!-- Image side -->
+      <div class="prod-featured-visual" style="background-image:url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=900&q=80');">
+        <div style="position:absolute;inset:0;background:linear-gradient(105deg,rgba(3,8,16,0.08) 0%,rgba(3,8,16,0.55) 100%);"></div>
+        <div style="position:absolute;bottom:2rem;left:2rem;z-index:1;">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:0.55rem;letter-spacing:0.2em;color:rgba(255,255,255,0.5);margin-bottom:0.5rem;">02 / DIGITAL MAPPING PLATFORM</div>
+          <div style="font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:600;color:white;line-height:1.15;">Airfree Map</div>
+        </div>
+      </div>
+      <!-- Content side -->
+      <div class="prod-featured-body">
+        <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;flex-wrap:wrap;">
+          <h2 style="font-family:'Playfair Display',serif;font-size:1.35rem;font-weight:600;color:var(--text-1);">Airfree Map</h2>
+          <span class="product-badge">Flagship Product</span>
+        </div>
+        <p style="font-size:0.86rem;color:var(--text-2);line-height:1.8;margin-bottom:1.5rem;">A comprehensive digital mapping and navigation platform engineered for enterprise spatial intelligence. Delivers real-time navigation, AI-powered routing, fleet intelligence, and deep spatial analytics — built on open geospatial standards for government, logistics, and infrastructure operators.</p>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:0.58rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent-b);margin-bottom:1rem;">Platform Capabilities</div>
+        <div class="feat-grid" style="margin-bottom:1.75rem;">
+          <div class="feat-card">
+            <div class="feat-card-title">Turn-by-Turn Navigation</div>
+            <div class="feat-card-desc">Real-time voice and visual routing across road networks</div>
+          </div>
+          <div class="feat-card">
+            <div class="feat-card-title">Traffic Analytics</div>
+            <div class="feat-card-desc">Live and historical traffic flow analysis and visualisation</div>
+          </div>
+          <div class="feat-card">
+            <div class="feat-card-title">Route Optimisation</div>
+            <div class="feat-card-desc">Multi-stop and multi-vehicle route planning</div>
+          </div>
+          <div class="feat-card">
+            <div class="feat-card-title">Offline Maps</div>
+            <div class="feat-card-desc">Downloadable map tiles for disconnected field operations</div>
+          </div>
+          <div class="feat-card">
+            <div class="feat-card-title">Fleet Tracking</div>
+            <div class="feat-card-desc">Real-time asset and vehicle location monitoring</div>
+          </div>
+          <div class="feat-card">
+            <div class="feat-card-title">Geocoding</div>
+            <div class="feat-card-desc">Address-to-coordinate resolution at enterprise scale</div>
+          </div>
+          <div class="feat-card">
+            <div class="feat-card-title">Reverse Geocoding</div>
+            <div class="feat-card-desc">Coordinate-to-address lookup for spatial enrichment</div>
+          </div>
+          <div class="feat-card">
+            <div class="feat-card-title">Spatial Search</div>
+            <div class="feat-card-desc">Proximity, boundary, and attribute-based querying</div>
+          </div>
+          <div class="feat-card">
+            <div class="feat-card-title">AI Routing Engine</div>
+            <div class="feat-card-desc">Machine learning-powered adaptive routing</div>
+          </div>
+          <div class="feat-card">
+            <div class="feat-card-title">OSM Integration</div>
+            <div class="feat-card-desc">OpenStreetMap-backed global basemap with custom layers</div>
+          </div>
+        </div>
+        <a href="contact.html" class="btn btn-gold">Enquire About Airfree Map</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCT GRID -->
+<section class="section" style="background:var(--bg-primary);">
+  <div class="container">
+    <div style="margin-bottom:3rem;">
+      <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-3);margin-bottom:0.75rem;">Product Suite</div>
+      <h2 class="reveal" style="font-size:clamp(1.5rem,2.5vw,2rem);margin-bottom:0;">Platform Products &amp; Services</h2>
+    </div>
+
+    <div class="products-grid">
+
+      <!-- 01 — Web GIS -->
+      <div class="prod-card reveal">
+        <div class="prod-visual" style="background-image:url('https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=700&q=80');">
+          <div class="prod-visual-meta">
+            <span class="prod-num">01</span>
+            <span class="prod-visual-title">Web GIS Platform</span>
+          </div>
+        </div>
+        <div class="prod-body">
+          <p>Enterprise web-based GIS for deploying, managing, and collaborating on spatial data through browser-native interfaces. Multi-user editing, real-time visualisation, and role-based access — without client-side software installation.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.25rem;">
+            <span class="tech-tag">Browser-Native</span>
+            <span class="tech-tag">WMS / WFS</span>
+            <span class="tech-tag">PostGIS</span>
+            <span class="tech-tag">Role-Based Access</span>
+          </div>
+          <a href="contact.html" class="btn btn-primary">Enquire</a>
+        </div>
+      </div>
+
+      <!-- 03 — API Subscriptions -->
+      <div class="prod-card reveal d1">
+        <div class="prod-visual" style="background-image:url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&w=700&q=80');">
+          <div class="prod-visual-meta">
+            <span class="prod-num">03</span>
+            <span class="prod-visual-title">API Subscriptions</span>
+          </div>
+        </div>
+        <div class="prod-body">
+          <p>Programmatic access to Airfree's spatial intelligence APIs. Flexible subscription tiers covering geocoding, routing, mapping, spatial search, and analytics for developers, integrators, and enterprise platforms.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.25rem;">
+            <span class="tech-tag">RESTful API</span>
+            <span class="tech-tag">Geocoding API</span>
+            <span class="tech-tag">Tiered Plans</span>
+            <span class="tech-tag">SLA-Backed</span>
+          </div>
+          <a href="contact.html" class="btn btn-primary">Enquire</a>
+        </div>
+      </div>
+
+      <!-- 04 — Enterprise GIS Licensing -->
+      <div class="prod-card reveal d2">
+        <div class="prod-visual" style="background-image:url('https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=700&q=80');">
+          <div class="prod-visual-meta">
+            <span class="prod-num">04</span>
+            <span class="prod-visual-title">Enterprise Licensing</span>
+          </div>
+        </div>
+        <div class="prod-body">
+          <p>Institutional licensing for Airfree's enterprise GIS platform. Designed for government procurement frameworks, multi-user organisational deployments, and environments requiring perpetual or term-based spatial platform access with full support.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.25rem;">
+            <span class="tech-tag">Multi-User</span>
+            <span class="tech-tag">Govt Panel Ready</span>
+            <span class="tech-tag">On-Premise / Cloud</span>
+          </div>
+          <a href="contact.html" class="btn btn-primary">Enquire</a>
+        </div>
+      </div>
+
+      <!-- 05 — GIS / Geospatial Hosting -->
+      <div class="prod-card reveal d1">
+        <div class="prod-visual" style="background-image:url('https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?auto=format&fit=crop&w=700&q=80');">
+          <div class="prod-visual-meta">
+            <span class="prod-num">05</span>
+            <span class="prod-visual-title">Geospatial Hosting</span>
+          </div>
+        </div>
+        <div class="prod-body">
+          <p>Fully managed cloud infrastructure for GIS servers, spatial databases, and geospatial data portals. Covers PostGIS, GeoServer, MapServer, and web GIS stacks — enabling enterprise-grade spatial infrastructure without in-house DevOps overhead.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.25rem;">
+            <span class="tech-tag">Managed PostGIS</span>
+            <span class="tech-tag">GeoServer</span>
+            <span class="tech-tag">99.9% Uptime SLA</span>
+          </div>
+          <a href="contact.html" class="btn btn-primary">Enquire</a>
+        </div>
+      </div>
+
+      <!-- 06 — Fleet Subscriptions -->
+      <div class="prod-card reveal d2">
+        <div class="prod-visual" style="background-image:url('https://images.unsplash.com/photo-1494976388531-d1058494cdd8?auto=format&fit=crop&w=700&q=80');">
+          <div class="prod-visual-meta">
+            <span class="prod-num">06</span>
+            <span class="prod-visual-title">Fleet Subscriptions</span>
+          </div>
+        </div>
+        <div class="prod-body">
+          <p>Subscription-based fleet intelligence powered by Airfree Map. Real-time vehicle tracking, AI-assisted route optimisation, spatial reporting, and operational analytics for logistics operators and field service teams.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.4rem;margin-bottom:1.25rem;">
+            <span class="tech-tag">Real-Time Tracking</span>
+            <span class="tech-tag">Per-Vehicle Pricing</span>
+            <span class="tech-tag">Spatial Reporting</span>
+          </div>
+          <a href="contact.html" class="btn btn-primary">Enquire</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="background:var(--bg-card);border-top:1px solid var(--border-s);padding:4rem 0;">
+  <div class="container">
+    <div class="grid-auto" style="gap:3rem;align-items:center;">
+      <div class="reveal">
+        <div class="label" style="margin-bottom:1rem;">Product Enquiries</div>
+        <h2 style="font-size:clamp(1.4rem,2.2vw,1.9rem);margin-bottom:0.75rem;">Request a Product Briefing</h2>
+        <p style="font-size:0.88rem;color:var(--text-2);max-width:520px;line-height:1.75;">Contact us to discuss licensing options, API access tiers, hosting requirements, or fleet subscription plans. We provide formal product documentation and technical briefings for procurement and evaluation processes.</p>
+      </div>
+      <div class="reveal d2" style="display:flex;flex-direction:column;gap:1rem;align-items:flex-end;">
+        <a href="contact.html" class="btn btn-gold">Request Product Briefing</a>
+        <a href="contact.html#capability" class="btn btn-ghost">Request Capability Statement</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script src="js/main.js"></script>
+</body>
+</html>

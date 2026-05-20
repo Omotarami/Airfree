@@ -10,6 +10,7 @@
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
     <link
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500&display=swap"
       rel="stylesheet"
@@ -119,25 +120,23 @@
                   </div>
                   <div
                     style="
-                      font-size: 0.95rem;
-                      color: var(--text-1);
                       display: flex;
                       flex-direction: column;
-                      gap: 0.6rem;
+                      gap: 1rem;
                     "
                   >
-                    <span
-                      >35 Cassia street, Munno Para West, 5115, South Australia,
-                      Australia</span
-                    >
-                    <span
-                      >324 Settlement Road, Thomastown, 3072, Victoria,
-                      Australia</span
-                    >
-                    <span
-                      >8 Seddon Way, Canning Vale, 6155, Western Australia,
-                      Australia</span
-                    >
+                    <div>
+                      <div style="font-family:'IBM Plex Mono',monospace;font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent-b);margin-bottom:0.2rem;">Adelaide &mdash; Head Office</div>
+                      <span style="font-size:0.9rem;color:var(--text-1);">35 Cassia Street, Munno Para West, SA 5115</span>
+                    </div>
+                    <div>
+                      <div style="font-family:'IBM Plex Mono',monospace;font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-3);margin-bottom:0.2rem;">Perth &mdash; Branch Office</div>
+                      <span style="font-size:0.9rem;color:var(--text-1);">8 Seddon Way, Canning Vale, WA 6155</span>
+                    </div>
+                    <div>
+                      <div style="font-family:'IBM Plex Mono',monospace;font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-3);margin-bottom:0.2rem;">Melbourne &mdash; Branch Office</div>
+                      <span style="font-size:0.9rem;color:var(--text-1);">324 Settlement Road, Thomastown, VIC 3072</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -157,7 +156,7 @@
                     Phone number
                   </div>
                   <div style="font-size: 0.95rem; color: var(--text-1)">
-                    +239679-20
+                    +61 8 xxxx xxxx
                   </div>
                   <div
                     style="
@@ -500,11 +499,42 @@
           </div>
           
         </div>
-        <div
-            id="contact-map"
-            style="height: 420px; width: 100%; border-radius: 12px"
-          ></div>
       </div>
+    </section>
+
+    <!-- LOCATIONS MAP -->
+    <section style="background:var(--bg-darkest);padding:4rem 0 0;">
+      <div class="container" style="padding-bottom:2.5rem;">
+        <div style="display:flex;align-items:baseline;gap:2rem;margin-bottom:2rem;flex-wrap:wrap;">
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-3);">Office Locations</div>
+          <div style="font-family:'IBM Plex Mono',monospace;font-size:0.6rem;letter-spacing:0.1em;color:var(--text-3);">Adelaide &mdash; Perth &mdash; Melbourne</div>
+        </div>
+        <div class="loc-grid reveal">
+          <!-- Adelaide — Head Office -->
+          <div style="border:1px solid var(--border-m);background:var(--bg-card);padding:1.75rem;position:relative;overflow:hidden;">
+            <div style="position:absolute;top:0;left:0;width:3px;height:100%;background:var(--accent-al);"></div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:0.56rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent-al);margin-bottom:0.65rem;">Head Office</div>
+            <div style="font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:600;color:var(--text-1);margin-bottom:0.65rem;">Adelaide, SA</div>
+            <div style="font-size:0.82rem;color:var(--text-2);line-height:1.7;">35 Cassia Street<br>Munno Para West<br>SA 5115, Australia</div>
+          </div>
+          <!-- Perth — Branch -->
+          <div style="border:1px solid var(--border-s);background:var(--bg-card);padding:1.75rem;position:relative;overflow:hidden;">
+            <div style="position:absolute;top:0;left:0;width:3px;height:100%;background:var(--accent-b);"></div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:0.56rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent-b);margin-bottom:0.65rem;">Branch Office</div>
+            <div style="font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:600;color:var(--text-1);margin-bottom:0.65rem;">Perth, WA</div>
+            <div style="font-size:0.82rem;color:var(--text-2);line-height:1.7;">8 Seddon Way<br>Canning Vale<br>WA 6155, Australia</div>
+          </div>
+          <!-- Melbourne — Branch -->
+          <div style="border:1px solid var(--border-s);background:var(--bg-card);padding:1.75rem;position:relative;overflow:hidden;">
+            <div style="position:absolute;top:0;left:0;width:3px;height:100%;background:var(--accent-b);"></div>
+            <div style="font-family:'IBM Plex Mono',monospace;font-size:0.56rem;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent-b);margin-bottom:0.65rem;">Branch Office</div>
+            <div style="font-family:'Playfair Display',serif;font-size:1.15rem;font-weight:600;color:var(--text-1);margin-bottom:0.65rem;">Melbourne, VIC</div>
+            <div style="font-size:0.82rem;color:var(--text-2);line-height:1.7;">324 Settlement Road<br>Thomastown<br>VIC 3072, Australia</div>
+          </div>
+        </div>
+      </div>
+      <!-- Full-width dark map -->
+      <div id="contact-map"></div>
     </section>
 
     <!-- CAPABILITY STATEMENT SECTION -->
