@@ -329,10 +329,12 @@ img { max-width: 100%; display: block; }
 
 /* ── Page hero ── */
 .page-hero {
-  padding-top: 9rem; padding-bottom: 4.5rem;
+  padding-top: calc(72px + 2rem);
+  padding-bottom: 4.5rem;
   background: var(--bg-darkest);
   border-bottom: 1px solid var(--border-s);
-  position: relative; overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 .page-hero-grid {
   position: absolute; inset: 0;
