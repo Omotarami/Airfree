@@ -1,22 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@300;400;500&display=swap');
 
 :root {
-  --bg-darkest:   #030810;
-  --bg-dark:      #070C18;
-  --bg-primary:   #09101E;
-  --bg-secondary: #0C1524;
-  --bg-card:      #0F1C2E;
-  --bg-elevated:  #132030;
-  --border-s:     #172438;
-  --border-m:     #1E2E46;
-  --border-h:     #263A58;
-  --text-1:       #F0F4F8;
-  --text-2:       #B8CCE0;
-  --text-3:       #7A9BB5;
-  --accent-b:     #3A6F9E;
-  --accent-bl:    #5A8FBE;
-  --accent-g:     #9A7428;
-  --accent-al:    #C4913A;
+
+  /* ── Backgrounds ── */
+  --bg-darkest:   #EAF2F8;
+  --bg-dark:      #F4F8FB;
+  --bg-primary:   #FFFFFF;
+  --bg-secondary: #EDF3F8;
+  --bg-card:      #FFFFFF;
+  --bg-elevated:  #F8FBFD;
+
+  /* ── Borders ── */
+  --border-s:     #D9E4EE;
+  --border-m:     #C7D7E5;
+  --border-h:     #AFC5D8;
+
+  /* ── Text ── */
+  --text-1:       #102030;
+  --text-2:       #486174;
+  --text-3:       #7890A3;
+
+  /* ── Brand Blues ── */
+  --accent-b:     #4A86B8;
+  --accent-bl:    #6AA7D6;
+
+  /* ── Gold Accent ── */
+  --accent-g:     #B98A3D;
+  --accent-al:    #D6A95C;
 }
 
 html, body {
