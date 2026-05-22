@@ -94,7 +94,7 @@ function injectNav() {
     <nav class="site-nav" id="site-nav">
       <div class="nav-inner">
         <a href="${BASE}index.html" class="nav-logo">
-        <img src="${BASE}images/Airfree-removebg-preview.png" alt="airfree_logo" class="nav-img">
+        <img src="${BASE}images/Airfree-1.png" alt="airfree_logo" class="nav-img">
         </a>
         <div class="nav-links" id="nav-links">
           ${linksHtml}
@@ -112,7 +112,7 @@ function injectNav() {
     <div class="mobile-overlay" id="mobile-menu">
       ${mobileHtml}
       <a href="${BASE}contact.html#capability" class="btn btn-primary" style="margin-top:1rem;">Request Capability Statement</a>
-      <button id="mobile-close" style="position:absolute;top:1.5rem;right:2rem;background:none;border:none;cursor:pointer;color:var(--text-2);font-size:1.4rem;">&#10005;</button>
+      
     </div>`;
 
   document.body.insertAdjacentHTML("afterbegin", navHtml);

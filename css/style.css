@@ -72,25 +72,35 @@ img { max-width: 100%; display: block; }
 
 .site-nav {
   position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 100;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 3rem);
+  max-width: 1320px;
+  z-index: 1000;
+
+  
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(255,255,255,0.35);
+  border-radius: 22px;
+
+  box-shadow:
+    0 10px 35px rgba(15, 23, 42, 0.08),
+    inset 0 1px 0 rgba(255,255,255,0.4);
+
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
 
   /* true glassmorphism — transparent enough to see blurred content behind */
-  background: rgba(5, 12, 28, 0.42);
-  backdrop-filter: blur(28px) saturate(220%) brightness(0.92);
-  -webkit-backdrop-filter: blur(28px) saturate(220%) brightness(0.92);
 
-  border-bottom: 1px solid rgba(255, 255, 255, 0.13);
-  box-shadow:
-    0 4px 32px rgba(0, 0, 0, 0.45),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
 
-  transition: background 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
-}
 .site-nav.scrolled {
-  background: rgba(7, 12, 24, 0.82);
+  
   backdrop-filter: blur(24px) saturate(200%);
   -webkit-backdrop-filter: blur(24px) saturate(200%);
 
@@ -122,7 +132,7 @@ img { max-width: 100%; display: block; }
   position: absolute;
   top: calc(100% + 10px);
   left: 0;
-  background: rgba(9, 18, 36, 0.88);
+  background: var(--bg-primary);
   backdrop-filter: blur(24px) saturate(200%);
   -webkit-backdrop-filter: blur(24px) saturate(200%);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -168,8 +178,8 @@ img { max-width: 100%; display: block; }
   background: none;
   border: none;
   cursor: pointer;
-  font-family: 'Playfair Display', serif;
-  font-size: 1.9rem;
+  font-family: 'Manrope', serif;
+  font-size: 1.6rem;
   color: var(--text-1);
   display: flex;
   align-items: center;
@@ -208,19 +218,16 @@ img { max-width: 100%; display: block; }
 .mobile-sub-link:hover { color: var(--accent-bl); }
 
 .nav-img {
-  height: 42px;
+  height: 30px;
   width: auto;
-  filter: brightness(0) invert(1) drop-shadow(0 0 6px rgba(255,255,255,0.35));
   transition: filter 0.25s ease;
 }
-.nav-logo:hover .nav-img {
-  filter: brightness(0) invert(1) drop-shadow(0 0 10px rgba(255,255,255,0.55));
-}
+
 .nav-img_footer {
   width: auto;
   height: 52px;
-  filter: brightness(0) invert(1) drop-shadow(0 0 8px rgba(255,255,255,0.25));
-  margin-bottom: 0.75rem;
+  
+  
 }
 .nav-logo-sub {
   font-family: 'IBM Plex Mono', monospace;
@@ -267,7 +274,7 @@ img { max-width: 100%; display: block; }
 .mobile-overlay {
   display: flex;
   position: fixed; inset: 0; top: 72px;
-  background: rgba(3, 8, 16, 0.97);
+  background: var(--bg-darkest);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   z-index: 200;
@@ -289,8 +296,8 @@ img { max-width: 100%; display: block; }
   transform: translateY(0);
 }
 .mobile-nav-link {
-  font-family: 'Playfair Display', serif; font-size: 1.9rem;
-  color: var(--text-1); padding: 0.35rem 0; display: block; width: 100%;
+  font-family: 'Manrope', serif; font-size: 1.6rem;
+  color: var(black); padding: 0.35rem 0; display: block; width: 100%;
 }
 .mobile-nav-link:hover { color: var(--accent-bl); }
 
@@ -323,7 +330,13 @@ img { max-width: 100%; display: block; }
 .hero-slide.active { opacity: 1; }
 .hero-overlay {
   position: absolute; inset: 0;
-  background: linear-gradient(135deg, rgba(3,8,16,0.90) 0%, rgba(9,16,30,0.80) 60%, rgba(7,12,24,0.88) 100%);
+ background: linear-gradient(
+    
+    135deg,
+    rgba(10, 18, 32, 0.75) 0%,
+    rgba(25, 45, 70, 0.55) 45%,
+    rgba(15, 28, 45, 0.70) 100%
+  );
 }
 .hero-content { position: relative; z-index: 2; width: 100%; }
 
@@ -402,8 +415,8 @@ img { max-width: 100%; display: block; }
 .btn:hover::before { left: 120%; }
 .btn-primary { background: var(--accent-b); color: white; border-color: var(--accent-b); }
 .btn-primary:hover { background: var(--accent-bl); border-color: var(--accent-bl); }
-.btn-ghost { background: transparent; color: var(--text-1); border-color: var(--border-h); }
-.btn-ghost:hover { border-color: var(--text-2); }
+.btn-ghost { background: transparent; color: var(--text-3); border-color: var(--border-h); }
+.btn-ghost:hover { border-color: var(--text-2); background-color: var(--accent-b); color: white; }
 .btn-gold { background: var(--accent-g); color: white; border-color: var(--accent-g); }
 .btn-gold:hover { background: var(--accent-al); border-color: var(--accent-al); }
 
